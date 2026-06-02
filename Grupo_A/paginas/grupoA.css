@@ -1,7 +1,21 @@
 body {
     background-color: #0d1b24;
     color: #e5e7eb;
-    margin: 15px;
+    margin-left: 25px;
+}
+
+.header {
+    display: flex;
+    /* Activa Flexbox */
+    align-items: center;
+    /* Alinea verticalmente imagen y texto */
+    gap: 12px;
+    /* Espacio entre imagen y título */
+}
+
+.logo {
+    width: 40px;
+    height: auto;
 }
 
 .grupo {
@@ -52,4 +66,9 @@ body {
 .equipo img {
     width: 28px;
     height: auto;
+}
+
+.grupo,
+.equipo-grupo {
+    margin-left: 100px;
 }
