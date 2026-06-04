@@ -1,74 +1,604 @@
-body {
-    background-color: #0d1b24;
-    color: #e5e7eb;
-    margin-left: 25px;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.header {
+body{
+    background:#020d22;
+    color:white;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+/* =========================
+barra-navegacion
+========================= */
+
+.barra-navegacion{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:72px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 40px;
+    z-index:100;
+}
+
+.logo img{
+    height:52px;
+    display:block;
+}
+
+.menu-navegacion{
+    display:flex;
+    gap:35px;
+}
+
+.menu-navegacion a{
+    color:white;
+    text-decoration:none;
+    font-size:12px;
+    letter-spacing:1px;
+    font-weight:500;
+    opacity:.95;
+    transition:.3s;
+}
+
+.menu-navegacion a:hover{
+    color:#d4a338;
+}
+
+.boton-grupo{
+    border:1px solid #c89a3d;
+    border-radius:12px;
+    padding:10px 18px;
+    font-size:11px;
+    letter-spacing:1px;
+    color:#f2c057;
+    transition:.3s;
+}
+
+.boton-grupo:hover{
+    background:#c89a3d;
+    color:#021026;
+}
+
+/* =========================
+HERO
+========================= */
+
+.portada{
+    position:relative;
+    min-height:760px;
+
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(1,8,25,.94) 0%,
+        rgba(1,8,25,.82) 35%,
+        rgba(1,8,25,.45) 70%,
+        rgba(1,8,25,.12) 100%
+    ),
+    url('../img/estadioCopaMundial.png');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.fondo-portada,
+.superposicion-portada{
+    display:none;
+}
+
+.contenido-portada{
+    position:relative;
+    z-index:10;
+    width:55%;
+    padding-left:125px;
+    padding-top:70px;
+}
+
+.contenido-portada h1{
+    font-family:'Oswald',sans-serif;
+    font-size:200px;
+    line-height:.88;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.contenido-portada h1 span{
+    color:#d4a338;
+}
+
+.contenido-portada h2{
+    color:#d4a338;
+    margin-top:20px;
+    letter-spacing:5px;
+    font-size:18px;
+    font-weight:700;
+}
+
+.contenido-portada p{
+    margin-top:18px;
+    line-height:1.7;
+    color:#e4e8ef;
+    font-size:15px;
+}
+
+/* =========================
+BANDERAS
+========================= */
+
+.fila-equipos {
     display: flex;
-    /* Activa Flexbox */
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.tarjeta-equipo {
+    width: 130px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    /* Alinea verticalmente imagen y texto */
-    gap: 12px;
-    /* Espacio entre imagen y título */
-}
-
-.logo {
-    width: 40px;
-    height: auto;
-}
-
-.grupo {
-    width: 260px;
-    background: #ffffff;
-    border-top-left-radius: 7px;
-    border-bottom-right-radius: 7px;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.grupo-header {
-    background: #b7e300;
-    color: #000;
     text-align: center;
-    font-weight: bold;
-    padding: 1px;
+}
+
+.tarjeta-equipo img {
+    width: 100%;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta-equipo h3 {
+    margin-top: 12px;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
     letter-spacing: 1px;
 }
 
-.equipo-grupo {
-    color: #000;
-    width: 260px;
-    background: #ffffff;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-    margin-top: 3px;
+.tarjeta-equipo span {
+    color: #d4a338;
+    font-size: 13px;
+    margin-top: 2px;
 }
 
-.equipos {
-    list-style: none;
-    margin: 0;
-    padding: 10px;
+/* =========================
+SEDES
+========================= */
+
+.sedes{
+    margin:-40px auto 0;
+    width:92%;
+    background:#02112b;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:22px;
+    position:relative;
+    z-index:8;
 }
 
-.equipo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 6px 0;
-    font-weight: bold;
+.section-title h2{
+    font-family:'Oswald';
+    font-size:32px;
+    letter-spacing:1px;
 }
 
-.equipo img {
-    width: 28px;
-    height: auto;
+.section-title p{
+    color:#cfd4dd;
+    font-size:13px;
+    margin-top:5px;
 }
 
-.grupo,
-.equipo-grupo {
-    margin-left: 100px;
+.sedes-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 18px;
+}
+
+/* Grid de 5 columnas para el Grupo B */
+.sedes-grid-5{
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.tarjeta-sede{
+    background:#071834;
+    border-radius:14px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+.tarjeta-sede:hover{
+    transform:translateY(-4px);
+    border-color:rgba(212,163,56,.35);
+}
+
+.tarjeta-sede img{
+    width:100%;
+    height:145px;
+    object-fit:cover;
+}
+
+.tarjeta-sede h3{
+    padding:14px 14px 0;
+    font-family:'Oswald';
+    font-size:18px;
+}
+
+.tarjeta-sede p{
+    padding:5px 14px;
+    font-size:13px;
+    color:#cfd4dd;
+}
+
+.tarjeta-sede span{
+    display:block;
+    padding:0 14px 14px;
+    color:#d4a338;
+    font-weight:700;
+}
+
+/* =========================
+DOBLE PANEL
+========================= */
+
+.seccion-doble{
+    width:92%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.panel{
+    background:#03152f;
+    border-radius:18px;
+    padding:25px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.panel h2{
+    font-family:'Oswald';
+    margin-bottom:22px;
+}
+
+.item{
+    display:flex;
+    gap:15px;
+    margin-bottom:18px;
+    align-items:center;
+}
+
+.item img{
+    width:52px;
+    height:52px;
+    border-radius:10px;
+    object-fit:cover;
+}
+
+.item h3{
+    font-family:'Oswald';
+    margin-bottom:4px;
+}
+
+.text-block h3{
+    margin-top:12px;
+    color:#d4a338;
+}
+
+/* =========================
+CALENDARIO
+========================= */
+
+.calendario{
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
+    padding:120px 40px;
+}
+
+.calendario h2{
+    font-family:'Oswald';
+    font-size:32px;
+    margin-bottom:40px;
+}
+
+.calendario-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:40px;
+}
+
+.calendario-card{
+    width:100%;
+    min-height:260px;
+
+    background:#071834;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+
+    padding:25px;
+}
+
+.calendario-card:hover{
+    transform:translateY(-5px);
+}
+
+.calendario-card h3{
+    text-align:center;
+    font-family:'Oswald';
+    color:#d4a338;
+}
+
+.calendario-date{
+    display:block;
+    text-align:center;
+    font-size:12px;
+    margin-bottom:20px;
+    color:#bfc7d5;
+}
+
+.match{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:15px;
+}
+
+.match img{
+    width:34px;
+    height:24px;
+    object-fit:cover;
+    border-radius:4px;
+}
+
+.match span{
+    font-size:12px;
+    font-weight:600;
+}
+
+.match strong{
+    color:#d4a338;
+}
+
+.calendario-card p{
+    font-size:11px;
+    color:#bfc7d5;
+    text-align:center;
+    margin-top:8px;
+}
+
+/* =========================
+CURIOSIDADES
+========================= */
+
+.curiosidades{
+    width:92%;
+    margin:80px auto;
+}
+
+.curiosidades h2{
+    font-family:'Oswald';
+    font-size:38px;
+    margin-bottom:25px;
+}
+
+.curiosidades-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+}
+
+.tarjeta-curiosidad{
+    background:#061a38;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:16px;
+    padding:22px;
+    text-align:center;
+    transition:.3s;
+}
+
+.tarjeta-curiosidad:hover{
+    transform:translateY(-5px);
+    border-color:#d4a338;
+}
+
+.icono-curiosidad{
+    font-size:34px;
+    margin-bottom:12px;
+}
+
+.tarjeta-curiosidad h3{
+    font-family:'Oswald';
+    color:#d4a338;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.tarjeta-curiosidad p{
+    font-size:13px;
+    line-height:1.5;
+    color:#cfd4dd;
+}
+
+.tarjeta-curiosidad img,
+.tarjeta-curiosidad i {
+    width: 50px;
+    height: 50px;
+    font-size: 90px;
+    margin-bottom: 20px;
+    color: #dca63a;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+.pie-pagina{
+    background:
+    linear-gradient(
+        rgba(2,13,34,.75),
+        rgba(2,13,34,.75)
+    ),
+    url('../img/estadioCopaMundial.png');
+
+    background-size:cover;
+    background-position:center;
+
+    padding:35px 60px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.texto-pie h2{
+    font-family:'Oswald';
+    font-size:32px;
+    line-height:1;
+    color:white;
+}
+
+.texto-pie p{
+    margin-top:8px;
+    color:#d4a338;
+    font-size:12px;
+    letter-spacing:1px;
+}
+
+.logo-pie img{
+    height:70px;
+    width:auto;
+    display:block;
+}
+
+.right{
+    text-align:right;
+}
+
+.right img{
+    width:250px;
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+
+    .contenido-portada{
+        width:70%;
+    }
+
+    .sedes-grid,
+    .sedes-grid-5{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .curiosidades-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .seccion-doble{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:900px){
+
+    .calendario-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .portada{
+        min-height:auto;
+        padding:120px 0 80px;
+    }
+
+    .contenido-portada{
+        width:100%;
+        padding:120px 25px 0;
+    }
+
+    .contenido-portada h1{
+        font-size:90px;
+    }
+
+    .contenido-portada h2{
+        font-size:15px;
+        letter-spacing:3px;
+    }
+
+    .fila-equipos{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+        margin-top:30px;
+    }
+
+    .tarjeta-equipo{
+        width:100%;
+    }
+
+    .tarjeta-equipo img{
+        width:100%;
+        max-width:130px;
+        margin:auto;
+    }
+
+    .sedes-grid,
+    .sedes-grid-5,
+    .calendario-grid,
+    .curiosidades-grid{
+        grid-template-columns:1fr;
+    }
+
+    .pie-pagina{
+        flex-direction:column;
+        gap:25px;
+        text-align:center;
+        padding:35px 20px;
+    }
+
+    .right{
+        text-align:center;
+    }
+
+    .texto-pie h2{
+        font-size:24px;
+    }
+
+    .logo-pie img{
+        height:70px;
+    }
+
 }

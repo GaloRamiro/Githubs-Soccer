@@ -4,40 +4,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GITHUBS-SOCCER</title>
+    <title>Grupo B - Mundial 2026</title>
     <link rel="stylesheet" href="grupoB.css">
 </head>
 
 <body>
-    <header class="header">
-        <img src="../img/WC26_Logo.png" alt="Logo Mundial" class="logo">
-        <h2>COPA MUNDIAL DE LA FIFA 2026</h2>
+
+    <!-- barra-navegacion -->
+    <header class="barra-navegacion">
+        <div class="logo">
+            <img src="../img/WC26_Logo.png" alt="World Cup Logo">
+        </div>
+
+        <nav class="menu-navegacion">
+            <a href="#">GRUPOS</a>
+            <a href="#">CALENDARIO</a>
+            <a href="#">SEDES</a>
+            <a href="#">NOTICIAS</a>
+            <a href="#">MÁS</a>
+        </nav>
+
+        <div class="boton-grupo">GRUPO B</div>
     </header>
 
-    <div class="grupo">
-        <div class="grupo-header">GRUPO B</div>
-    </div>
+    <!-- portada -->
+    <section class="portada">
+        <div class="fondo-portada"></div>
+        <div class="superposicion-portada"></div>
 
-    <div class="equipo-grupo">
-        <ul class="equipos">
-            <li class="equipo">
-                <img src="../img/bosnia.png" alt="bosnia">
-                <span>BOSNIA</span>
-            </li>
-            <li class="equipo">
-                <img src="../img/canada.png" alt="canada">
-                <span>CANADÁ</span>
-            </li>
-            <li class="equipo">
-                <img src="../img/catar.png" alt="catar">
-                <span>CATAR</span>
-            </li>
-            <li class="equipo">
-                <img src="../img/suiza.png" alt="suiza">
-                <span>SUIZA</span>
-            </li>
-        </ul>
-    </div>
+        <div class="contenido-portada">
+            <h1>GRUPO <span>B</span></h1>
+            <h2>NORTE MEETS MUNDO</h2>
+            <p>
+                El anfitrión canadiense, los campeones de Asia, la solidez helvética y la garra balcánica.<br>
+                Un grupo de contrastes donde el drama está garantizado.
+            </p>
+
+            <div class="fila-equipos">
+                <div class="tarjeta-equipo">
+                    <img src="../img/canada.png" alt="Canadá">
+                    <h3>CANADÁ</h3>
+                    <span>CONCACAF</span>
+                </div>
+
+                <div class="tarjeta-equipo">
+                    <img src="../img/bosnia.png" alt="Bosnia">
+                    <h3>BOSNIA</h3>
+                    <span>UEFA</span>
+                </div>
+
+                <div class="tarjeta-equipo">
+                    <img src="../img/catar.png" alt="Catar">
+                    <h3>CATAR</h3>
+                    <span>AFC</span>
+                </div>
+
+                <div class="tarjeta-equipo">
+                    <img src="../img/suiza.png" alt="Suiza">
+                    <h3>SUIZA</h3>
+                    <span>UEFA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEDES -->
+    <section class="sedes">
+        <div class="section-title">
+            <h2>SEDES DEL GRUPO B</h2>
+            <p>Los partidos se disputarán en cinco estadios de Canadá y Estados Unidos.</p>
+        </div>
+
+        <div class="sedes-grid sedes-grid-5">
+            <div class="tarjeta-sede">
+                <img src="../img/BMO Field.png" alt="Toronto Stadium">
+                <h3>TORONTO</h3>
+                <p>Toronto Stadium</p>
+                <span>44,315 capacidad</span>
+            </div>
+
+            <div class="tarjeta-sede">
+                <img src="../img/BC Place.png" alt="BC Place">
+                <h3>VANCOUVER</h3>
+                <p>BC Place</p>
+                <span>48,821 capacidad</span>
+            </div>
+
+            <div class="tarjeta-sede">
+                <img src="../img/Levi's Stadium.png" alt="Levi's Stadium">
+                <h3>CALIFORNIA</h3>
+                <p>Levi's Stadium</p>
+                <span>69,391 capacidad</span>
+            </div>
+
+            <div class="tarjeta-sede">
+                <img src="../img/SoFi Stadium.png" alt="SoFi Stadium">
+                <h3>CALIFORNIA</h3>
+                <p>SoFi Stadium</p>
+                <span>69,650 capacidad</span>
+            </div>
+
+            <div class="tarjeta-sede">
+                <img src="../img/Lume Field.png" alt="Lumen Field">
+                <h3>SEATTLE</h3>
+                <p>Lumen Field</p>
+                <span>65,123 capacidad</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- HISTORIA + ESTADISTICAS -->
+    <section class="seccion-doble">
+        <div class="panel">
+            <h2>HISTORIA EN MUNDIALES</h2>
+
+            <div class="item">
+                <img src="../img/canada.png" alt="Canadá">
+                <div>
+                    <h3>CANADÁ</h3>
+                    <p>Co-anfitrión junto a EE.UU. y México. Participó en México 1986 y Catar 2022. Como coanfitrión de
+                        2026 busca su mejor actuación mundialista, con hambre de revancha histórica.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="../img/bosnia.png" alt="Bosnia">
+                <div>
+                    <h3>BOSNIA</h3>
+                    <p>Su única participación fue Brasil 2014, donde sorprendieron con un fútbol vistoso. Regresan
+                        cargados de talento y experiencia europea.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="../img/catar.png" alt="Catar">
+                <div>
+                    <h3>CATAR</h3>
+                    <p>Debutó en una Copa del Mundo como anfitrión en 2022. Desde entonces, el fútbol catarí ha seguido
+                        creciendo gracias a una fuerte inversión en formación y desarrollo deportivo.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="../img/suiza.png" alt="Suiza">
+                <div>
+                    <h3>SUIZA</h3>
+                    <p>Potencia consolidada de la UEFA. Cuartos de final en 1954. Regular en la fase de grupos, busca
+                        dar el salto definitivo en esta edición.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2>ESTADÍSTICAS Y CLASIFICACIÓN</h2>
+            <div class="text-block">
+                <h3>Canadá</h3>
+                <p>Clasificado automáticamente como país co-organizador. Posee una generación histórica liderada por
+                    figuras de élite en Europa.</p>
+
+                <h3>Bosnia</h3>
+                <p>Superó una eliminatoria UEFA muy competida, aprovechando su intensidad física y la creatividad de su
+                    mediocampo.</p>
+
+                <h3>Catar</h3>
+                <p>Pasó la fase AFC con autoridad, demostrando que el proyecto Qatar Stars League sigue dando frutos a
+                    nivel internacional.</p>
+
+                <h3>Suiza</h3>
+                <p>Finalizó su grupo de UEFA sin mayores complicaciones, con una defensa sólida y un bloque compacto
+                    difícil de superar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- calendario -->
+    <section class="calendario">
+        <h2>CALENDARIO DEL GRUPO B</h2>
+
+        <div class="calendario-grid">
+            <!-- JORNADA 1 -->
+            <div class="calendario-card">
+                <h3>JORNADA 1</h3>
+                <span class="calendario-date">12/13 DE JUNIO DE 2026</span>
+
+                <div class="match">
+                    <img src="../img/canada.png" alt="Canadá">
+                    <span>CANADÁ</span>
+                    <strong>VS.</strong>
+                    <span>BOSNIA</span>
+                    <img src="../img/bosnia.png" alt="Bosnia">
+                </div>
+                <p>Toronto Stadium (Toronto)</p>
+
+                <div class="match">
+                    <img src="../img/catar.png" alt="Catar">
+                    <span>CATAR</span>
+                    <strong>VS.</strong>
+                    <span>SUIZA</span>
+                    <img src="../img/suiza.png" alt="Suiza">
+                </div>
+                <p>Levi's Stadium (California)</p>
+            </div>
+
+            <!-- JORNADA 2 -->
+            <div class="calendario-card">
+                <h3>JORNADA 2</h3>
+                <span class="calendario-date">18 DE JUNIO DE 2026</span>
+
+                <div class="match">
+                    <img src="../img/suiza.png" alt="Suiza">
+                    <span>SUIZA</span>
+                    <strong>VS.</strong>
+                    <span>BOSNIA</span>
+                    <img src="../img/bosnia.png" alt="Bosnia">
+                </div>
+                <p>SoFi Stadium (California)</p>
+
+                <div class="match">
+                    <img src="../img/canada.png" alt="Canadá">
+                    <span>CANADÁ</span>
+                    <strong>VS.</strong>
+                    <span>CATAR</span>
+                    <img src="../img/catar.png" alt="Catar">
+                </div>
+                <p>BC Place (Vancouver)</p>
+            </div>
+
+            <!-- JORNADA 3 -->
+            <div class="calendario-card">
+                <h3>JORNADA 3</h3>
+                <span class="calendario-date">24 DE JUNIO DE 2026</span>
+
+                <div class="match">
+                    <img src="../img/suiza.png" alt="Suiza">
+                    <span>SUIZA</span>
+                    <strong>VS.</strong>
+                    <span>CANADÁ</span>
+                    <img src="../img/canada.png" alt="Canadá">
+                </div>
+                <p>BC Place (Vancouver)</p>
+
+                <div class="match">
+                    <img src="../img/bosnia.png" alt="Bosnia">
+                    <span>BOSNIA</span>
+                    <strong>VS.</strong>
+                    <span>CATAR</span>
+                    <img src="../img/catar.png" alt="Catar">
+                </div>
+                <p>Lumen Field (Seattle)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURIOSIDADES -->
+    <section class="curiosidades">
+        <h2>CURIOSIDADES DEL GRUPO B</h2>
+
+        <div class="curiosidades-grid">
+            <div class="tarjeta-curiosidad">
+                <img src="../img/icno1.png" class="icono-curiosidad" alt="Icono 1">
+                <h3>EL DESPERTAR CANADIENSE</h3>
+                <p>Canadá será anfitrión de partidos mundialistas por primera vez en su historia. Una generación entera
+                    esperó este momento.</p>
+            </div>
+
+            <div class="tarjeta-curiosidad">
+                <img src="../img/icno2.png" class="icono-curiosidad" alt="Icono 2">
+                <h3>CAMPEONES DE ASIA</h3>
+                <p>Catar llega al Mundial respaldado por dos títulos consecutivos de la Copa Asiática, un logro que
+                    refleja el crecimiento sostenido de su fútbol. Una prueba de fuego para su proyecto.</p>
+            </div>
+
+            <div class="tarjeta-curiosidad">
+                <img src="../img/icno3.png" class="icono-curiosidad" alt="Icono 3">
+                <h3>EL MURO SUIZO</h3>
+                <p>Suiza lleva 5 mundiales consecutivos clasificando. Su solidez defensiva la convierte en favorita del
+                    grupo.</p>
+            </div>
+
+            <div class="tarjeta-curiosidad">
+                <img src="../img/icno4.png" class="icono-curiosidad" alt="Icono 4">
+                <h3>BALCANES EN LLAMAS</h3>
+                <p>Bosnia regresa con su segunda generación dorada. El fútbol de los Balcanes tiene mucho que demostrar.
+                </p>
+            </div>
+
+            <div class="tarjeta-curiosidad">
+                <img src="../img/icno5.png" class="icono-curiosidad" alt="Icono 5">
+                <h3>DOS UEFA, UN GRUPO</h3>
+                <p>Suiza y Bosnia comparten grupo UEFA en una batalla europea que se define en territorio americano.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- pie-pagina -->
+    <footer class="pie-pagina">
+        <div class="texto-pie">
+            <h2>UN MUNDIAL.<br>UN SUEÑO.</h2>
+            <p>104 partidos por hacer historia.</p>
+        </div>
+
+        <div class="logo-pie">
+            <img src="../img/WC26_Logo.png" alt="Mundial 2026">
+        </div>
+
+        <div class="imagen-pie right">
+            <img src="../img/juntos.png" alt="Mundial 2026">
+        </div>
+    </footer>
 </body>
 
 </html>
