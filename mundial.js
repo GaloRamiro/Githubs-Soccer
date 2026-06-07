@@ -47,3 +47,11 @@ if (tarjetaGrupoC) {
         window.location.href = 'Grupo_C/paginas/grupoC.html';
     });
 }
+
+const tarjetaGrupoB = document.getElementById('tarjeta-grupo-b');
+
+if (tarjetaGrupoB) {
+    tarjetaGrupoB.addEventListener('click', function() {
+        window.location.href = 'Grupo_B/paginas/grupoB.html';
+    });
+}
