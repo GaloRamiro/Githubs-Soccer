@@ -62,3 +62,11 @@ if (tarjetaGrupoB) {
         window.location.href = 'Grupo_B/paginas/grupoB.html';
     });
 }
+
+const tarjetaGrupoD = document.getElementById('tarjeta-grupo-d');
+
+if (tarjetaGrupoD) {
+    tarjetaGrupoD.addEventListener('click', function () {
+        window.location.href = 'Grupo_D/paginas/grupoD.html';
+    });
+}
