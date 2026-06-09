@@ -70,3 +70,11 @@ if (tarjetaGrupoD) {
         window.location.href = 'Grupo_D/paginas/grupoD.html';
     });
 }
+
+const tarjetaGrupoF = document.getElementById('tarjeta-grupo-f');
+
+if (tarjetaGrupoF) {
+    tarjetaGrupoF.addEventListener('click', function () {
+        window.location.href = 'Grupo_F/paginas/grupoF.html';
+    });
+} 
