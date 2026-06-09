@@ -12,7 +12,9 @@ body{
     font-family:'Inter',sans-serif;
     overflow-x:hidden;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 /* =========================
 barra-navegacion
 ========================= */
@@ -91,7 +93,7 @@ HERO
         rgba(1,8,25,.45) 70%,
         rgba(1,8,25,.12) 100%
     ),
-    url('../img/estadioCopaMundial.png');
+    url('../imagenes/fondoCopaa.png');
 
     background-size:cover;
     background-position:center;
@@ -146,40 +148,33 @@ HERO
 BANDERAS
 ========================= */
 
-.fila-equipos {
-    display: flex;
-    gap: 25px;
-    margin-top: 35px;
+.fila-equipos{
+    display:flex;
+    gap:25px;
+    margin-top:35px;
 }
 
-.tarjeta-equipo {
-    width: 130px; /* Un poco más de espacio para que no se amontone */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra perfectamente todo el contenido vertical */
-    text-align: center;
+.tarjeta-equipo{
+    width:115px;
+    text-align:center;
 }
 
-.tarjeta-equipo img {
-    width: 100%;
-    height: 75px;        /* Forzamos a que todas tengan exactamente el mismo alto */
-    object-fit: cover;   /* Evita que las imágenes se distorsionen al estirarse */
-    border-radius: 12px;
-    display: block;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Un toque de sombra para resaltar */
+.tarjeta-equipo img{
+    width:100%;
+    border-radius:12px;
+    display:block;
 }
 
-.tarjeta-equipo h3 {
-    margin-top: 12px;
-    font-size: 18px;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
+.tarjeta-equipo h3{
+    margin-top:10px;
+    font-size:18px;
+    font-family:'Oswald';
+    letter-spacing:1px;
 }
 
-.tarjeta-equipo span {
-    color: #d4a338;
-    font-size: 13px;
-    margin-top: 2px;
+.tarjeta-equipo span{
+    color:#d4a338;
+    font-size:13px;
 }
 
 /* =========================
@@ -211,9 +206,9 @@ SEDES
 
 .sedes-grid{
     display:grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-top: 18px;
+    grid-template-columns:repeat(5,1fr);
+    gap:16px;
+    margin-top:18px;
 }
 
 .tarjeta-sede{
@@ -412,7 +407,7 @@ FOOTER
         rgba(2,13,34,.75),
         rgba(2,13,34,.75)
     ),
-    url('../img/estadioCopaMundial.png');
+    url('../imagenes/fondoCopaa.png');
 
     background-size:cover;
     background-position:center;
