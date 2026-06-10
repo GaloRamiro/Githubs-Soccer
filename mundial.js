@@ -71,6 +71,14 @@ if (tarjetaGrupoD) {
     });
 }
 
+const tarjetaGrupoE = document.getElementById('tarjeta-grupo-e');
+
+if (tarjetaGrupoE) {
+    tarjetaGrupoE.addEventListener('click', function () {
+        window.location.href = 'Grupo_E/paginas/grupoE.html';
+    });
+}
+
 const tarjetaGrupoF = document.getElementById('tarjeta-grupo-f');
 
 if (tarjetaGrupoF) {
