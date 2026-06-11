@@ -1,333 +1,378 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../../imagenes/LogoDev.svg" />
     <title>Grupo A - Mundial 2026</title>
     <!-- Enlazado al archivo CSS de esta misma carpeta -->
-    <link rel="stylesheet" href="../../styles/estilosPaginas.css">
-</head>
+     
+    <link rel="stylesheet" href="../../styles/estilosPaginas.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- barra-navegacion -->
     <header class="barra-navegacion">
-        <div class="logo">
-            <img src="../img/WC26_Logo.png" id="logo" alt="World Cup Logo" style="cursor: pointer;">
-        </div>
+      <div class="logo">
+        <img
+          src="../img/WC26_Logo.png"
+          id="logo"
+          alt="World Cup Logo"
+          style="cursor: pointer"
+        />
+      </div>
 
-        <nav class="menu-navegacion">
-            <a href="#">GRUPOS</a>
-            <a href="#">CALENDARIO</a>
-            <a href="#">SEDES</a>
-            <a href="#">NOTICIAS</a>
-            <a href="#">MÁS</a>
-        </nav>
+      <nav class="menu-navegacion">
+        <a href="../../index.html">INICIO</a>
+        <a href="#IdGrupos">GRUPOS</a>
+        <a href="#idCalendario">CALENDARIO</a>
+        <a href="#idSedes">SEDES</a>
+        <a href="#idNoticias">NOTICIAS</a>
+        <a href="#mas">MÁS</a>
+      </nav>
 
-        <div class="boton-grupo">GRUPO A</div>
+      <div class="boton-grupo">GRUPO A</div>
     </header>
 
     <!-- portada -->
     <section class="portada">
-        <div class="fondo-portada"></div>
-        <div class="superposicion-portada"></div>
+      <div class="fondo-portada"></div>
+      <div class="superposicion-portada"></div>
 
-        <div class="contenido-portada">
-            <h1>GRUPO <span>A</span></h1>
-            <h2>UN SUEÑO COANFITRÍON</h2>
-            <p>
-                México, coanfitrión y gigante de Concacaf, lidera el Grupo A del Mundial junto a Sudáfrica, Corea del
-                Sur y Chequia.<br>
-                Con la experiencia de África, la velocidad asiática y la técnica europea, este grupo será emocionante e
-                impredecible.
-            </p>
+      <div class="contenido-portada">
+        <h1>GRUPO <span>A</span></h1>
+        <h2>UN SUEÑO COANFITRÍON</h2>
+        <p>
+          México, coanfitrión y gigante de Concacaf, lidera el Grupo A del
+          Mundial junto a Sudáfrica, Corea del Sur y Chequia.<br />
+          Con la experiencia de África, la velocidad asiática y la técnica
+          europea, este grupo será emocionante e impredecible.
+        </p>
 
-            <!-- BANDERAS (Rutas corregidas según tu estructura de archivos) -->
-            <div class="fila-equipos">
-                <div class="tarjeta-equipo">
-                    <img src="../img/banderaMexico.png" alt="México">
-                    <h3>MÉXICO</h3>
-                    <span>CONCACAF</span>
-                </div>
+        <!-- BANDERAS (Rutas corregidas según tu estructura de archivos) -->
+        <div class="fila-equipos">
+          <div class="tarjeta-equipo">
+            <img src="../img/banderaMexico.png" alt="México" />
+            <h3>MÉXICO</h3>
+            <span>CONCACAF</span>
+          </div>
 
-                <div class="tarjeta-equipo">
-                    <img src="../img/banderaSudafrica.png" alt="Sudáfrica">
-                    <h3>SUDÁFRICA</h3>
-                    <span>CAF</span>
-                </div>
+          <div class="tarjeta-equipo">
+            <img src="../img/banderaSudafrica.png" alt="Sudáfrica" />
+            <h3>SUDÁFRICA</h3>
+            <span>CAF</span>
+          </div>
 
-                <div class="tarjeta-equipo">
-                    <img src="../img/banderaCorea.png" alt="Corea del Sur">
-                    <h3>REPÚBLICA DE COREA</h3>
-                    <span>AFC</span>
-                </div>
+          <div class="tarjeta-equipo">
+            <img src="../img/banderaCorea.png" alt="Corea del Sur" />
+            <h3>REPÚBLICA DE COREA</h3>
+            <span>AFC</span>
+          </div>
 
-                <div class="tarjeta-equipo">
-                    <img src="../img/banderaCheca.png" alt="Chequia">
-                    <h3>CHEQUIA</h3>
-                    <span>UEFA</span>
-                </div>
-            </div>
+          <div class="tarjeta-equipo">
+            <img src="../img/banderaCheca.png" alt="Chequia" />
+            <h3>CHEQUIA</h3>
+            <span>UEFA</span>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- SEDES -->
-    <section class="sedes">
-        <div class="section-title">
-            <h2>SEDES DEL GRUPO A</h2>
-            <p>Los partidos se disputarán en espectaculares estadios de los Estados Unidos.</p>
+    <section id="idSedes" class="sedes">
+      <div class="section-title">
+        <h2>SEDES DEL GRUPO A</h2>
+        <p>
+          Los partidos se disputarán en espectaculares estadios de los Estados
+          Unidos.
+        </p>
+      </div>
+
+      <div class="sedes-grid">
+        <div class="tarjeta-sede">
+          <img
+            src="../img/estadioCiudadMexico.png"
+            alt="Estadio Ciudad de México"
+          />
+          <h3>MÉXICO</h3>
+          <p>Estadio Ciudad de México</p>
+          <span>83,000 capacidad</span>
         </div>
 
-        <div class="sedes-grid">
-            <div class="tarjeta-sede">
-                <img src="../img/estadioCiudadMexico.png" alt="Estadio Ciudad de México">
-                <h3>MÉXICO</h3>
-                <p>Estadio Ciudad de México</p>
-                <span>83,000 capacidad</span>
-            </div>
-
-            <div class="tarjeta-sede">
-                <img src="../img/estadioGuadalajara.png" alt="Estadio Guadalajara">
-                <h3>MÉXICO</h3>
-                <p>Estadio Guadalajara</p>
-                <span>48,000 capacidad</span>
-            </div>
-
-            <div class="tarjeta-sede">
-                <img src="../img/estadioMonterrey.png" alt="Estadio Monterrey">
-                <h3>MÉXICO</h3>
-                <p>Estadio Monterrey</p>
-                <span>53,500 capacidad</span>
-            </div>
-
-            <div class="tarjeta-sede">
-                <img src="../img/estadioAtlanta.png" alt="Estadio Atlanta">
-                <h3>ESTADOS UNIDOS</h3>
-                <p>Estadio Atlanta</p>
-                <span>75.000 capacidad</span>
-            </div>
-
-
+        <div class="tarjeta-sede">
+          <img src="../img/estadioGuadalajara.png" alt="Estadio Guadalajara" />
+          <h3>MÉXICO</h3>
+          <p>Estadio Guadalajara</p>
+          <span>48,000 capacidad</span>
         </div>
+
+        <div class="tarjeta-sede">
+          <img src="../img/estadioMonterrey.png" alt="Estadio Monterrey" />
+          <h3>MÉXICO</h3>
+          <p>Estadio Monterrey</p>
+          <span>53,500 capacidad</span>
+        </div>
+
+        <div class="tarjeta-sede">
+          <img src="../img/estadioAtlanta.png" alt="Estadio Atlanta" />
+          <h3>ESTADOS UNIDOS</h3>
+          <p>Estadio Atlanta</p>
+          <span>75.000 capacidad</span>
+        </div>
+      </div>
     </section>
 
     <!-- HISTORIA + ESTADISTICAS -->
-    <section class="seccion-doble">
-        <div class="panel">
-            <h2>HISTORIA EN MUNDIALES</h2>
+    <section id="IdGrupos" class="seccion-doble">
+      <div class="panel">
+        <h2>HISTORIA EN MUNDIALES</h2>
 
-            <div class="item">
-                <img src="../img/banderaMexico.png" alt="México">
-                <div>
-                    <h3>MÉXICO</h3>
-                    <p>La Selección Mexicana de Fútbol ha participado en 17 ediciones de la Copa Mundial, destacando por
-                        ser el primer país en albergar el torneo en tres ocasiones (1970, 1986 y 2026). Sus mejores
-                        resultados históricos son llegar a los cuartos de final en ambos mundiales celebrados en casa.
-                    </p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="../img/banderaSudafrica.png" alt="Sudáfrica">
-                <div>
-                    <h3>SUDÁFRICA</h3>
-                    <p>La selección de Sudáfrica ha participado en cuatro Copas del Mundo de la FIFA, incluyendo su
-                        histórica clasificación para el torneo de 2026. Pese a ser anfitriona en 2010, nunca ha logrado
-                        superar la fase de grupos en sus anteriores participaciones en Francia 1998, Corea-Japón 2002 y
-                        Sudáfrica 2010.
-                    </p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="../img/banderaCorea.png" alt="Corea del Sur">
-                <div>
-                    <h3>REPUBLICA DE COREA</h3>
-                    <p>Corea del Sur es la selección asiática con más participaciones en la Copa del Mundo. Su hito
-                        histórico más grande ocurrió en 2002, cuando alcanzó un cuarto lugar inédito. Además de ser una
-                        potencia en su confederación, destaca por su racha de 11 clasificaciones consecutivas desde
-                        1986.
-                    </p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="../img/banderaCheca.png" alt="Chequia">
-                <div>
-                    <h3>CHEQUIA</h3>
-                    <p>Chequia (incluyendo su etapa histórica como Checoslovaquia) suma un total de 10 participaciones
-                        en Copas del Mundo y destaca por haber sido subcampeona mundial en dos ocasiones (Italia 1934 y
-                        Chile 1962).
-                    </p>
-                </div>
-            </div>
+        <div class="item">
+          <img src="../img/banderaMexico.png" alt="México" />
+          <div>
+            <h3>MÉXICO</h3>
+            <p>
+              La Selección Mexicana de Fútbol ha participado en 17 ediciones de
+              la Copa Mundial, destacando por ser el primer país en albergar el
+              torneo en tres ocasiones (1970, 1986 y 2026). Sus mejores
+              resultados históricos son llegar a los cuartos de final en ambos
+              mundiales celebrados en casa.
+            </p>
+          </div>
         </div>
 
-        <div class="panel">
-            <h2>ESTADÍSTICAS Y CLASIFICACIÓN</h2>
-            <div class="text-block">
-                <h3>México</h3>
-                <p>Antes de su eliminación en la fase de grupos de Catar 2022, México ostentaba el récord de siete
-                    eliminaciones consecutivas en octavos de final.</p>
-
-                <h3>Sudáfrica</h3>
-                <p>Sudáfrica disputará su cuarta fase final. La única vez que no logró la victoria fue en su debut
-                    en 1998. A pesar de las eliminaciones tempranas, Bafana Bafana derrotó a Eslovenia (1-0) en 2002
-                    y a Francia (2-1) en 2010.</p>
-
-                <h3>República de Corea</h3>
-                <p>República de Corea participará en su undécima Copa Mundial consecutiva. Solo Alemania, Argentina,
-                    Brasil y España tienen rachas activas más largas</p>
-
-                <h3>Chequia</h3>
-                <p>Chequia es una de las tres selecciones que han llegado a al menos dos finales de la Copa Mundial
-                    sin haber levantado nunca el trofeo. Hungría también perdió dos finales (1938, 1954). El récord
-                    de más finales disputadas sin ganar el título pertenece a los Países Bajos (1974, 1978, 2010).</p>
-            </div>
+        <div class="item">
+          <img src="../img/banderaSudafrica.png" alt="Sudáfrica" />
+          <div>
+            <h3>SUDÁFRICA</h3>
+            <p>
+              La selección de Sudáfrica ha participado en cuatro Copas del Mundo
+              de la FIFA, incluyendo su histórica clasificación para el torneo
+              de 2026. Pese a ser anfitriona en 2010, nunca ha logrado superar
+              la fase de grupos en sus anteriores participaciones en Francia
+              1998, Corea-Japón 2002 y Sudáfrica 2010.
+            </p>
+          </div>
         </div>
+
+        <div class="item">
+          <img src="../img/banderaCorea.png" alt="Corea del Sur" />
+          <div>
+            <h3>REPUBLICA DE COREA</h3>
+            <p>
+              Corea del Sur es la selección asiática con más participaciones en
+              la Copa del Mundo. Su hito histórico más grande ocurrió en 2002,
+              cuando alcanzó un cuarto lugar inédito. Además de ser una potencia
+              en su confederación, destaca por su racha de 11 clasificaciones
+              consecutivas desde 1986.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="../img/banderaCheca.png" alt="Chequia" />
+          <div>
+            <h3>CHEQUIA</h3>
+            <p>
+              Chequia (incluyendo su etapa histórica como Checoslovaquia) suma
+              un total de 10 participaciones en Copas del Mundo y destaca por
+              haber sido subcampeona mundial en dos ocasiones (Italia 1934 y
+              Chile 1962).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>ESTADÍSTICAS Y CLASIFICACIÓN</h2>
+        <div class="text-block">
+          <h3>México</h3>
+          <p>
+            Antes de su eliminación en la fase de grupos de Catar 2022, México
+            ostentaba el récord de siete eliminaciones consecutivas en octavos
+            de final.
+          </p>
+
+          <h3>Sudáfrica</h3>
+          <p>
+            Sudáfrica disputará su cuarta fase final. La única vez que no logró
+            la victoria fue en su debut en 1998. A pesar de las eliminaciones
+            tempranas, Bafana Bafana derrotó a Eslovenia (1-0) en 2002 y a
+            Francia (2-1) en 2010.
+          </p>
+
+          <h3>República de Corea</h3>
+          <p>
+            República de Corea participará en su undécima Copa Mundial
+            consecutiva. Solo Alemania, Argentina, Brasil y España tienen rachas
+            activas más largas
+          </p>
+
+          <h3>Chequia</h3>
+          <p>
+            Chequia es una de las tres selecciones que han llegado a al menos
+            dos finales de la Copa Mundial sin haber levantado nunca el trofeo.
+            Hungría también perdió dos finales (1938, 1954). El récord de más
+            finales disputadas sin ganar el título pertenece a los Países Bajos
+            (1974, 1978, 2010).
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- calendario -->
-    <section class="calendario">
-        <h2>CALENDARIO DEL GRUPO A</h2>
+    <section id="idCalendario" class="calendario">
+      <h2>CALENDARIO DEL GRUPO A</h2>
 
-        <div class="calendario-grid">
-            <!-- JORNADA 1 -->
-            <div class="calendario-card">
-                <h3>JORNADA 1</h3>
-                <span class="calendario-date">11 DE JUNIO DE 2026</span>
+      <div class="calendario-grid">
+        <!-- JORNADA 1 -->
+        <div class="calendario-card">
+          <h3>JORNADA 1</h3>
+          <span class="calendario-date">11 DE JUNIO DE 2026</span>
 
-                <div class="match">
-                    <img src="../img/banderaMexico.png" alt="México">
-                    <span>MÉXICO</span>
-                    <strong>VS.</strong>
-                    <span>SUDÁFRICA</span>
-                    <img src="../img/banderaSudafrica.png" alt="Sudáfrica">
-                </div>
-                <p>Estadio Cuidad de México</p>
+          <div class="match">
+            <img src="../img/banderaMexico.png" alt="México" />
+            <span>MÉXICO</span>
+            <strong>VS.</strong>
+            <span>SUDÁFRICA</span>
+            <img src="../img/banderaSudafrica.png" alt="Sudáfrica" />
+          </div>
+          <p>Estadio Cuidad de México</p>
 
-
-                <div class="match">
-                    <img src="../img/banderaCorea.png" alt="Corea del Sur">
-                    <span>REPÚBLICA DE COREA</span>
-                    <strong>VS.</strong>
-                    <span>CHEQUIA</span>
-                    <img src="../img/banderaCheca.png" alt="Chequia">
-                </div>
-                <p>Estadio Guadalajara</p>
-            </div>
-
-            <!-- JORNADA 2 -->
-            <div class="calendario-card">
-                <h3>JORNADA 2</h3>
-                <span class="calendario-date">18 DE JUNIO DE 2026</span>
-
-                <div class="match">
-                    <img src="../img/banderaCheca.png" alt="Chequia">
-                    <span>CHEQUIA</span>
-                    <strong>VS.</strong>
-                    <span>SUDÁFRICA</span>
-                    <img src="../img/banderaSudafrica.png" alt="Sudáfrica">
-                </div>
-                <p>Estadio Atlanta</p>
-
-                <div class="match">
-                    <img src="../img/banderaMexico.png" alt="México">
-                    <span>MÉXICO</span>
-                    <strong>VS.</strong>
-                    <span>REPÚBLICA DE COREA</span>
-                    <img src="../img/banderaCorea.png" alt="Corea del Sur">
-                </div>
-                <p>Estadio Guadalajara</p>
-            </div>
-
-            <!-- JORNADA 3 -->
-            <div class="calendario-card">
-                <h3>JORNADA 3</h3>
-                <span class="calendario-date">24 DE JUNIO DE 2026</span>
-
-                <div class="match">
-                    <img src="../img/banderaCheca.png" alt="Chequia">
-                    <span>SUDÁFRICA</span>
-                    <strong>VS.</strong>
-                    <span>REPÚBLICA DE COREA</span>
-                    <img src="../img/banderaCorea.png" alt="Corea del Sur">
-                </div>
-                <p>Estadio Monterrey</p>
-
-                <div class="match">
-                    <img src="../img/banderaSudafrica.png" alt="Sudáfrica">
-                    <span>CHEQUIA</span>
-                    <strong>VS.</strong>
-                    <span>MÉXICO</span>
-                    <img src="../img/banderaMexico.png" alt="México">
-                </div>
-                <p>Estadio Guadalajara</p>
-            </div>
+          <div class="match">
+            <img src="../img/banderaCorea.png" alt="Corea del Sur" />
+            <span>REPÚBLICA DE COREA</span>
+            <strong>VS.</strong>
+            <span>CHEQUIA</span>
+            <img src="../img/banderaCheca.png" alt="Chequia" />
+          </div>
+          <p>Estadio Guadalajara</p>
         </div>
+
+        <!-- JORNADA 2 -->
+        <div class="calendario-card">
+          <h3>JORNADA 2</h3>
+          <span class="calendario-date">18 DE JUNIO DE 2026</span>
+
+          <div class="match">
+            <img src="../img/banderaCheca.png" alt="Chequia" />
+            <span>CHEQUIA</span>
+            <strong>VS.</strong>
+            <span>SUDÁFRICA</span>
+            <img src="../img/banderaSudafrica.png" alt="Sudáfrica" />
+          </div>
+          <p>Estadio Atlanta</p>
+
+          <div class="match">
+            <img src="../img/banderaMexico.png" alt="México" />
+            <span>MÉXICO</span>
+            <strong>VS.</strong>
+            <span>REPÚBLICA DE COREA</span>
+            <img src="../img/banderaCorea.png" alt="Corea del Sur" />
+          </div>
+          <p>Estadio Guadalajara</p>
+        </div>
+
+        <!-- JORNADA 3 -->
+        <div class="calendario-card">
+          <h3>JORNADA 3</h3>
+          <span class="calendario-date">24 DE JUNIO DE 2026</span>
+
+          <div class="match">
+            <img src="../img/banderaCheca.png" alt="Chequia" />
+            <span>SUDÁFRICA</span>
+            <strong>VS.</strong>
+            <span>REPÚBLICA DE COREA</span>
+            <img src="../img/banderaCorea.png" alt="Corea del Sur" />
+          </div>
+          <p>Estadio Monterrey</p>
+
+          <div class="match">
+            <img src="../img/banderaSudafrica.png" alt="Sudáfrica" />
+            <span>CHEQUIA</span>
+            <strong>VS.</strong>
+            <span>MÉXICO</span>
+            <img src="../img/banderaMexico.png" alt="México" />
+          </div>
+          <p>Estadio Guadalajara</p>
+        </div>
+      </div>
     </section>
 
     <!-- CURIOSIDADES (Usa los nombres exactos icno1.png, icno2.png, etc.) -->
-    <section class="curiosidades">
-        <h2>CURIOSIDADES DEL GRUPO A</h2>
+    <section id="idNoticias" class="curiosidades">
+      <h2>CURIOSIDADES DEL GRUPO A</h2>
 
-        <div class="curiosidades-grid">
-            <div class="tarjeta-curiosidad">
-                <img src="../img/icno1.png" class="icono-curiosidad" alt="Icono 1">
-                <h3>ESTADIOS DE ESTRENOS</h3>
-                <p>Los duelos de este sector se jugarán en sedes emblemáticas como el Estadio Ciudad de México, el
-                    Estadio Guadalajara y el Estadio Monterrey.</p>
-            </div>
-
-            <div class="tarjeta-curiosidad">
-                <img src="../img/icno2.png" class="icono-curiosidad" alt="Icono 2">
-                <h3>LA LARGA ESPERA</h3>
-                <p>Sudáfrica vuelve a una Copa del Mundo tras 16 años de ausencia, habiendo jugado por última vez en el
-                    torneo que ellos mismos organizaron en.</p>
-            </div>
-
-            <div class="tarjeta-curiosidad">
-                <img src="../img/icno3.png" class="icono-curiosidad" alt="Icono 3">
-                <h3>REYES DE LOS PENALES</h3>
-                <p>Consiguieron su boleto al Mundial de una forma dramática en el repechaje de la UEFA, superando dos
-                    tandas de penales consecutivas (primero contra Irlanda y luego frente a Dinamarca).</p>
-            </div>
-
-            <div class="tarjeta-curiosidad">
-                <img src="../img/icno4.png" class="icono-curiosidad" alt="Icono 4">
-                <h3>CRUCES DEL RECUERDO</h3>
-                <p>México y la República de Corea volverán a medir fuerzas en el Estadio Guadalajara, reeditando los
-                    intensos partidos que disputaron en las fases de grupos de Francia 1998 y Rusia 2018.</p>
-            </div>
-
-            <div class="tarjeta-curiosidad">
-                <img src="../img/icno5.png" class="icono-curiosidad" alt="Icono 5">
-                <h3>DIVERSIDAD TOTAL</h3>
-                <p>Cuatro continentes y estilos de juego completamente distintos en una sola zona.</p>
-            </div>
+      <div class="curiosidades-grid">
+        <div class="tarjeta-curiosidad">
+          <img src="../img/icno1.png" class="icono-curiosidad" alt="Icono 1" />
+          <h3>ESTADIOS DE ESTRENOS</h3>
+          <p>
+            Los duelos de este sector se jugarán en sedes emblemáticas como el
+            Estadio Ciudad de México, el Estadio Guadalajara y el Estadio
+            Monterrey.
+          </p>
         </div>
+
+        <div class="tarjeta-curiosidad">
+          <img src="../img/icno2.png" class="icono-curiosidad" alt="Icono 2" />
+          <h3>LA LARGA ESPERA</h3>
+          <p>
+            Sudáfrica vuelve a una Copa del Mundo tras 16 años de ausencia,
+            habiendo jugado por última vez en el torneo que ellos mismos
+            organizaron en.
+          </p>
+        </div>
+
+        <div class="tarjeta-curiosidad">
+          <img src="../img/icno3.png" class="icono-curiosidad" alt="Icono 3" />
+          <h3>REYES DE LOS PENALES</h3>
+          <p>
+            Consiguieron su boleto al Mundial de una forma dramática en el
+            repechaje de la UEFA, superando dos tandas de penales consecutivas
+            (primero contra Irlanda y luego frente a Dinamarca).
+          </p>
+        </div>
+
+        <div class="tarjeta-curiosidad">
+          <img src="../img/icno4.png" class="icono-curiosidad" alt="Icono 4" />
+          <h3>CRUCES DEL RECUERDO</h3>
+          <p>
+            México y la República de Corea volverán a medir fuerzas en el
+            Estadio Guadalajara, reeditando los intensos partidos que disputaron
+            en las fases de grupos de Francia 1998 y Rusia 2018.
+          </p>
+        </div>
+
+        <div class="tarjeta-curiosidad">
+          <img src="../img/icno5.png" class="icono-curiosidad" alt="Icono 5" />
+          <h3>DIVERSIDAD TOTAL</h3>
+          <p>
+            Cuatro continentes y estilos de juego completamente distintos en una
+            sola zona.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- pie-pagina -->
-    <footer class="pie-pagina">
-        <div class="texto-pie">
-            <h2>UN MUNDIAL.<br>UN SUEÑO.</h2>
-            <p>104 partidos por hacer historia.</p>
-        </div>
+    <footer id="mas" class="pie-pagina">
+      <div class="texto-pie">
+        <h2>UN MUNDIAL.<br />UN SUEÑO.</h2>
+        <p>104 partidos por hacer historia.</p>
+      </div>
 
-        <div class="logo-pie">
-            <img src="../img/WC26_Logo.png" alt="Mundial 2026">
-        </div>
+      <div class="logo-pie">
+        <a href="../../index.html">
+        <img src="../img/WC26_Logo.png" alt="Mundial 2026" />
+        </a>
+      </div>
 
-        <div class="imagen-pie right">
-            <img src="../img/juntos.png" alt="Mundial 2026">
-        </div>
+      <div class="imagen-pie right">
+        <img src="../img/juntos.png" alt="Mundial 2026" />
+      </div>
     </footer>
 
     <script src="grupoA.js"></script>
-
-</body>
-
+  </body>
 </html>
