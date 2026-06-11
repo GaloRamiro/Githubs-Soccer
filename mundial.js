@@ -62,3 +62,27 @@ if (tarjetaGrupoB) {
         window.location.href = 'Grupo_B/paginas/grupoB.html';
     });
 }
+
+const tarjetaGrupoD = document.getElementById('tarjeta-grupo-d');
+
+if (tarjetaGrupoD) {
+    tarjetaGrupoD.addEventListener('click', function () {
+        window.location.href = 'Grupo_D/paginas/grupoD.html';
+    });
+}
+
+const tarjetaGrupoE = document.getElementById('tarjeta-grupo-e');
+
+if (tarjetaGrupoE) {
+    tarjetaGrupoE.addEventListener('click', function () {
+        window.location.href = 'Grupo_E/paginas/grupoE.html';
+    });
+}
+
+const tarjetaGrupoF = document.getElementById('tarjeta-grupo-f');
+
+if (tarjetaGrupoF) {
+    tarjetaGrupoF.addEventListener('click', function () {
+        window.location.href = 'Grupo_F/paginas/grupoF.html';
+    });
+} 
