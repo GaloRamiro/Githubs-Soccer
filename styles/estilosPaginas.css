@@ -615,3 +615,396 @@ RESPONSIVE
     }
 
 }
+
+.alineacion{
+    width:92%;
+    margin:80px auto;
+}
+
+.cancha{
+    background:#0d2c1d;
+    min-height:900px;
+    border-radius:25px;
+    position:relative;
+    border:2px solid rgba(255,255,255,.1);
+    overflow:hidden;
+}
+
+.jugador{
+    position:absolute;
+    text-align:center;
+    width:100px;
+}
+
+.jugador img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #18d6a3;
+}
+
+.jugador h4{
+    color:white;
+    margin-top:8px;
+    font-size:14px;
+}
+
+.jugador span{
+    color:#d4a338;
+}
+
+.delantero-izq{top:80px;left:15%;}
+.delantero-centro{top:40px;left:50%;transform:translateX(-50%);}
+.delantero-der{top:80px;right:15%;}
+
+.medio-izq{top:260px;left:22%;}
+.medio-centro{top:220px;left:50%;transform:translateX(-50%);}
+.medio-der{top:260px;right:22%;}
+
+.defensa-izq{top:500px;left:10%;}
+.central-1{top:450px;left:35%;}
+.central-2{top:450px;right:35%;}
+.defensa-der{top:500px;right:10%;}
+
+.portero{
+    bottom:40px;
+    left:50%;
+    transform:translateX(-50%);
+}
+/* =========================
+RESPONSIVE ALINEACIÓN
+========================= */
+
+@media (max-width: 1024px){
+
+    .cancha{
+        min-height: 750px;
+    }
+
+    .jugador{
+        width: 85px;
+    }
+
+    .jugador img{
+        width: 75px;
+        height: 75px;
+    }
+
+    .jugador h4{
+        font-size: 12px;
+    }
+
+}
+
+/* TABLETS Y CELULARES */
+
+@media (max-width: 768px){
+
+    .alineacion{
+        width: 96%;
+        margin: 50px auto;
+    }
+
+    .cancha{
+        min-height: 650px;
+        padding: 10px;
+    }
+
+    .jugador{
+        width: 70px;
+    }
+
+    .jugador img{
+        width: 60px;
+        height: 60px;
+        border-width: 3px;
+    }
+
+    .jugador h4{
+        font-size: 10px;
+    }
+
+    .jugador span{
+        font-size: 9px;
+    }
+
+    /* Delanteros */
+    .delantero-izq{
+        top: 70px;
+        left: 8%;
+    }
+
+    .delantero-centro{
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .delantero-der{
+        top: 70px;
+        right: 8%;
+    }
+
+    /* Mediocampo */
+    .medio-izq{
+        top: 200px;
+        left: 15%;
+    }
+
+    .medio-centro{
+        top: 170px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .medio-der{
+        top: 200px;
+        right: 15%;
+    }
+
+    /* Defensa */
+    .defensa-izq{
+        top: 380px;
+        left: 5%;
+    }
+
+    .central-1{
+        top: 340px;
+        left: 28%;
+    }
+
+    .central-2{
+        top: 340px;
+        right: 28%;
+    }
+
+    .defensa-der{
+        top: 380px;
+        right: 5%;
+    }
+
+    /* Portero */
+    .portero{
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+}
+
+/* CELULARES PEQUEÑOS */
+
+@media (max-width: 480px){
+
+    .cancha{
+        min-height: 580px;
+    }
+
+    .jugador{
+        width: 60px;
+    }
+
+    .jugador img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .jugador h4{
+        font-size: 9px;
+    }
+
+    .jugador span{
+        font-size: 8px;
+    }
+
+}
+/* =========================
+PALMARÉS BRASIL
+========================= */
+
+.titulos{
+    width:92%;
+    margin:80px auto;
+}
+
+.titulos-grid{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    gap:20px;
+}
+
+.titulo-card{
+    background:#071834;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    transition:.3s;
+}
+
+.titulo-card:hover{
+    transform:translateY(-8px);
+    border-color:#d4a338;
+}
+
+.titulo-card h3{
+    font-size:28px;
+    margin-bottom:10px;
+    color:#fff;
+}
+
+.titulo-card p{
+    color:#cfcfcf;
+}
+
+/* =========================
+LEYENDAS
+========================= */
+
+.leyendas{
+    width:92%;
+    margin:80px auto;
+}
+
+.jugadores-grid{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;
+}
+
+.jugador-card{
+    background:#071834;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    overflow:hidden;
+    text-align:center;
+    transition:.3s;
+}
+
+.jugador-card:hover{
+    transform:translateY(-8px);
+    border-color:#d4a338;
+}
+
+.jugador-card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+.jugador-card h3{
+    margin-top:15px;
+    color:white;
+}
+
+.jugador-card span{
+    display:block;
+    color:#d4a338;
+    margin:10px 0 20px;
+}
+
+/* =========================
+SECTION TITLE
+========================= */
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:2.2rem;
+    color:white;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#cfcfcf;
+}
+
+/* =========================
+RESPONSIVE TABLET
+========================= */
+
+@media(max-width:1024px){
+
+    .titulos-grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .jugadores-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .jugador-card img{
+        height:260px;
+    }
+
+}
+
+/* =========================
+RESPONSIVE CELULAR
+========================= */
+
+@media(max-width:768px){
+
+    .titulos{
+        width:96%;
+    }
+
+    .leyendas{
+        width:96%;
+    }
+
+    .titulos-grid{
+        grid-template-columns: repeat(2,1fr);
+        gap:15px;
+    }
+
+    .jugadores-grid{
+        grid-template-columns: 1fr;
+        gap:20px;
+    }
+
+    .titulo-card{
+        padding:20px;
+    }
+
+    .titulo-card h3{
+        font-size:22px;
+    }
+
+    .section-title h2{
+        font-size:1.7rem;
+    }
+
+    .jugador-card img{
+        height:280px;
+    }
+
+}
+
+/* =========================
+CELULARES PEQUEÑOS
+========================= */
+
+@media(max-width:480px){
+
+    .titulos-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-card h3{
+        font-size:20px;
+    }
+
+    .section-title h2{
+        font-size:1.5rem;
+    }
+
+    .jugador-card img{
+        height:240px;
+    }
+
+}
