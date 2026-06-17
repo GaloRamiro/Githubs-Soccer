@@ -351,3 +351,12 @@ body {
     font-weight: 600;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
+
+.capa-logo {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.capa-logo.visible {
+    opacity: 1;
+}
