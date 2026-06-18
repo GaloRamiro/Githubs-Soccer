@@ -1,0 +1,719 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #020d22;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================
+barra-navegacion
+========================= */
+
+.barra-navegacion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 40px;
+    z-index: 100;
+}
+
+.logo img {
+    height: 52px;
+    display: block;
+}
+
+.menu-navegacion {
+    display: flex;
+    gap: 35px;
+}
+
+.menu-navegacion a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    opacity: .95;
+    transition: .3s;
+}
+
+.menu-navegacion a:hover {
+    color: #d4a338;
+}
+
+.boton-grupo {
+    border: 1px solid #c89a3d;
+    border-radius: 12px;
+    padding: 10px 18px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #f2c057;
+    transition: .3s;
+}
+
+.boton-grupo:hover {
+    background: #c89a3d;
+    color: #021026;
+}
+
+/* =========================
+HERO (PORTADA)
+========================= */
+
+.portada {
+    position: relative;
+    min-height: 760px;
+
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background:
+        linear-gradient(90deg,
+            rgba(1, 8, 25, .94) 0%,
+            rgba(1, 8, 25, .82) 35%,
+            rgba(1, 8, 25, .45) 70%,
+            rgba(1, 8, 25, .12) 100%),
+        url('../../imagenes/fondoCopaa.png');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Ocultar elementos heredados/viejos */
+.fondo-portada,
+.superposicion-portada {
+    display: none;
+}
+
+/* CONTENIDO */
+.contenido-portada {
+    position: relative;
+    z-index: 10;
+    width: 55%;
+    padding-left: 125px;
+    padding-top: 70px;
+}
+
+.contenido-portada h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 160px; /* Ajustado sutilmente para acomodar nombres largos como PAÍSES BAJOS */
+    line-height: .88;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.contenido-portada h1 span {
+    color: #d4a338;
+}
+
+.contenido-portada h2 {
+    color: #d4a338;
+    margin-top: 20px;
+    letter-spacing: 5px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.contenido-portada p {
+    margin-top: 18px;
+    line-height: 1.7;
+    color: #e4e8ef;
+    font-size: 15px;
+}
+
+/* =========================
+TARJETA EQUIPO (BANDERAS/PORTADA)
+========================= */
+
+.tarjeta-equipo {
+    width: 130px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.tarjeta-equipo img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tarjeta-equipo h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+.tarjeta-equipo span {
+    color: #d4a338;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Fila de equipos alternativos por si se usa en los índices */
+.fila-equipos {
+    display: flex;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+/* =========================
+PALMARÉS / HISTORIA (GRID)
+========================= */
+
+.titulos {
+    width: 92%;
+    margin: 80px auto;
+}
+
+.titulos-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.titulo-card {
+    background: #071834;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    transition: .3s;
+}
+
+.titulo-card:hover {
+    transform: translateY(-8px);
+    border-color: #d4a338;
+}
+
+.titulo-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 26px;
+    color: #fff;
+}
+
+.titulo-card p {
+    color: #cfcfcf;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* =========================
+LEYENDAS
+========================= */
+
+.leyendas {
+    width: 92%;
+    margin: 80px auto;
+}
+
+.jugadores-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.jugador-card {
+    background: #071834;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    transition: .3s;
+}
+
+.jugador-card:hover {
+    transform: translateY(-8px);
+    border-color: #d4a338;
+}
+
+.jugador-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.jugador-card h3 {
+    font-family: 'Oswald', sans-serif;
+    margin-top: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+.jugador-card span {
+    display: block;
+    color: #d4a338;
+    font-size: 14px;
+    margin: 10px 0 20px;
+}
+
+/* =========================
+DOBLE PANEL (ESTADÍSTICAS Y DATOS)
+========================= */
+
+.seccion-doble {
+    width: 92%;
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.panel {
+    background: #03152f;
+    border-radius: 18px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, .08);
+}
+
+.panel h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 10px;
+}
+
+.text-block h3 {
+    font-family: 'Oswald', sans-serif;
+    margin-top: 16px;
+    color: #d4a338;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+.text-block p {
+    color: #bfc7d5;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 4px;
+}
+
+/* Items genéricos dentro de paneles (con imágenes si se requiere) */
+.item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 18px;
+    align-items: center;
+}
+
+.item img {
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.item h3 {
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 4px;
+}
+
+/* =========================
+SECTION TITLE (COMPONENTES REUTILIZABLES)
+========================= */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2rem;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.section-title p {
+    color: #cfcfcf;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* =========================
+PIE DE PÁGINA (FOOTER)
+========================= */
+
+.pie-pagina {
+    background:
+        linear-gradient(rgba(2, 13, 34, .85),
+            rgba(2, 13, 34, .85)),
+        url('../../imagenes/fondoCopaa.png');
+
+    background-size: cover;
+    background-position: center;
+    padding: 45px 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.texto-pie h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    line-height: 1.1;
+    color: white;
+}
+
+.texto-pie p {
+    margin-top: 8px;
+    color: #d4a338;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.logo-pie img {
+    height: 70px;
+    width: auto;
+    display: block;
+}
+
+.right {
+    text-align: right;
+}
+
+.right img {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ==========================================================================
+   SECCIONES ADICIONALES (Mantenidas por compatibilidad del framework de diseño)
+   ========================================================================== */
+
+/* =========================
+CALENDARIO
+========================= */
+.calendario {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+.calendario h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.calendario-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.calendario-card {
+    background: #071834;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 14px;
+    padding: 20px;
+    transition: .3s;
+}
+
+.calendario-card:hover {
+    transform: translateY(-5px);
+    border-color: #d4a338;
+}
+
+.calendario-card h3 {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #d4a338;
+}
+
+.calendario-date {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: #bfc7d5;
+}
+
+.match {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.match img {
+    width: 34px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.match span {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.match strong {
+    color: #d4a338;
+}
+
+.calendario-card p {
+    font-size: 11px;
+    color: #bfc7d5;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* =========================
+ALINEACIÓN / CANCHA TÁCTICA
+========================= */
+.alineacion {
+    width: 92%;
+    margin: 80px auto;
+}
+
+.cancha {
+    background: #0d2c1d;
+    min-height: 900px;
+    border-radius: 25px;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, .1);
+    overflow: hidden;
+}
+
+.jugador {
+    position: absolute;
+    text-align: center;
+    width: 100px;
+}
+
+.jugador img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #18d6a3;
+}
+
+.jugador h4 {
+    color: white;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.jugador span {
+    color: #d4a338;
+}
+
+/* Coordenadas de los Jugadores en la Cancha */
+.delantero-izq { top: 80px; left: 15%; }
+.delantero-centro { top: 40px; left: 50%; transform: translateX(-50%); }
+.delantero-der { top: 80px; right: 15%; }
+.medio-izq { top: 260px; left: 22%; }
+.medio-centro { top: 220px; left: 50%; transform: translateX(-50%); }
+.medio-der { top: 260px; right: 22%; }
+.defensa-izq { top: 500px; left: 10%; }
+.central-1 { top: 450px; left: 35%; }
+.central-2 { top: 450px; right: 35%; }
+.defensa-der { top: 500px; right: 10%; }
+.portero { bottom: 40px; left: 50%; transform: translateX(-50%); }
+
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================================== */
+
+/* PROCESAMIENTO PARA ESCRITORIOS MEDIANOS / TABLETS RECTANGULARES */
+@media(max-width: 1100px) {
+    .contenido-portada {
+        width: 70%;
+        padding-left: 60px;
+    }
+
+    .contenido-portada h1 {
+        font-size: 110px;
+    }
+
+    .seccion-doble {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+}
+
+@media(max-width: 1024px) {
+    .titulos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .jugadores-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .jugador-card img {
+        height: 260px;
+    }
+
+    .cancha {
+        min-height: 750px;
+    }
+
+    .jugador {
+        width: 85px;
+    }
+
+    .jugador img {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+/* DISPOSITIVOS MÓVILES (MÁXIMO 768px) */
+@media(max-width: 768px) {
+    .barra-navegacion {
+        padding: 0 20px;
+    }
+
+    .menu-navegacion {
+        gap: 15px;
+    }
+
+    .menu-navegacion a {
+        font-size: 10px;
+    }
+
+    .boton-grupo {
+        display: none; /* Oculta el botón decorativo lateral en móviles para priorizar espacio */
+    }
+
+    .portada {
+        min-height: auto;
+        padding: 120px 0 60px;
+    }
+
+    .contenido-portada {
+        width: 100%;
+        padding: 40px 20px 0;
+    }
+
+    .contenido-portada h1 {
+        font-size: 70px;
+    }
+
+    .contenido-portada h2 {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    .titulos, .leyendas, .alineacion {
+        width: 95%;
+        margin: 50px auto;
+    }
+
+    .titulos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .jugadores-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .titulo-card {
+        padding: 20px;
+    }
+
+    .titulo-card h3 {
+        font-size: 22px;
+    }
+
+    .section-title h2 {
+        font-size: 1.7rem;
+    }
+
+    .jugador-card img {
+        height: 300px;
+    }
+
+    .calendario-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cancha {
+        min-height: 650px;
+    }
+
+    /* Redistribución adaptativa de jugadores móviles */
+    .jugador img { width: 60px; height: 60px; border-width: 3px; }
+    .jugador h4 { font-size: 10px; }
+    .jugador span { font-size: 9px; }
+    .delantero-izq { top: 70px; left: 5%; }
+    .delantero-der { top: 70px; right: 5%; }
+    .medio-izq { top: 200px; left: 10%; }
+    .medio-der { top: 200px; right: 10%; }
+    .defensa-izq { top: 380px; left: 4%; }
+    .defensa-der { top: 380px; right: 4%; }
+    .central-1 { left: 26%; top: 340px; }
+    .central-2 { right: 26%; top: 340px; }
+
+    .pie-pagina {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .right {
+        text-align: center;
+    }
+}
+
+/* CELULARES EXTRA PEQUEÑOS (MÁXIMO 480px) */
+@media(max-width: 480px) {
+    .contenido-portada h1 {
+        font-size: 55px;
+    }
+
+    .titulos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .jugador-card img {
+        height: 250px;
+    }
+
+    .cancha {
+        min-height: 580px;
+    }
+    
+    .texto-pie h2 {
+        font-size: 24px;
+    }
+}
