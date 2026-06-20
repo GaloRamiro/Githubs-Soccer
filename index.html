@@ -1,255 +1,231 @@
 <!doctype html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mundial 2026</title>
     <link rel="stylesheet" href="imagenes/LogoDev.svg" />
     <link rel="stylesheet" href="mundial.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- VIDEO -->
 
     <section class="contenedor-video">
-      <div class="capa-logo">
-        <img
-          src="imagenes/logoFifa.png"
-          alt="Logo Mundial"
-          class="logo-mundial"
-          id="logoMundial"
-        />
+        <div class="capa-logo">
+            <img src="imagenes/logoFifa.png" alt="Logo Mundial" class="logo-mundial" id="logoMundial" />
 
-        <p class="texto-scroll">↓ Desliza para descubrir ↓</p>
-      </div>
+            <p class="texto-scroll">↓ Desliza para descubrir ↓</p>
+        </div>
 
-      <video id="videoMundial" muted playsinline preload="auto">
-        <source src="imagenes/video.mp4" type="video/mp4" />
-      </video>
+        <video id="videoMundial" muted playsinline preload="auto">
+            <source src="imagenes/video.mp4" type="video/mp4" />
+        </video>
     </section>
 
     <!-- GRUPOS -->
     <div class="encabezado">
-      <span class="subtitulo"> MUNDIAL FIFA 2026 </span>
+        <span class="subtitulo"> MUNDIAL FIFA 2026 </span>
 
-      <h1>Fase de Grupos</h1>
+        <h1>Fase de Grupos</h1>
     </div>
     <div class="rejilla-bento">
-      <div
-        class="tarjeta tarjeta-grande"
-        id="tarjeta-grupo-a"
-        style="cursor: pointer"
-      >
-        <img src="imagenes/prueba.jpg" class="imagen-fondo" />
-        <div class="equipo-grupo">
-          <h2>Grupo A</h2>
-          <ul class="equipos">
-            <li class="equipo">
-              <img src="Grupo_A/img/banderaMexico.png" alt="México" />
-              <span>México</span>
-            </li>
-            <li class="equipo">
-              <img src="Grupo_A/img/banderaSudafrica.png" alt="Sudáfrica" />
-              <span>Sudáfrica</span>
-            </li>
-            <li class="equipo">
-              <img src="Grupo_A/img/banderaCorea.png" alt="Corea del Sur" />
-              <span>República de Corea</span>
-            </li>
-            <li class="equipo">
-              <img src="Grupo_A/img/banderaCheca.png" alt="República Checa" />
-              <span>Chequia</span>
-            </li>
-          </ul>
+        <div class="tarjeta tarjeta-grande" id="tarjeta-grupo-a" style="cursor: pointer">
+            <img src="imagenes/prueba.jpg" class="imagen-fondo" />
+            <div class="equipo-grupo">
+                <h2>Grupo A</h2>
+                <ul class="equipos">
+                    <li class="equipo">
+                        <img src="Grupo_A/img/banderaMexico.png" alt="México" />
+                        <span>México</span>
+                    </li>
+                    <li class="equipo">
+                        <img src="Grupo_A/img/banderaSudafrica.png" alt="Sudáfrica" />
+                        <span>Sudáfrica</span>
+                    </li>
+                    <li class="equipo">
+                        <img src="Grupo_A/img/banderaCorea.png" alt="Corea del Sur" />
+                        <span>República de Corea</span>
+                    </li>
+                    <li class="equipo">
+                        <img src="Grupo_A/img/banderaCheca.png" alt="República Checa" />
+                        <span>Chequia</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
 
-      <div
-        class="tarjeta tarjeta-grande"
-        id="tarjeta-grupo-b"
-        style="cursor: pointer"
-      >
-        <img src="imagenes/grupoB.png" class="imagen-fondo" />
+        <div class="tarjeta tarjeta-grande" id="tarjeta-grupo-b" style="cursor: pointer">
+            <img src="imagenes/grupoB.png" class="imagen-fondo" />
 
-        <div class="equipo-grupo">
-          <h2>Grupo B</h2>
-          <ul class="equipos">
-            <li class="equipo">
-              <img src="Grupo_B/img/canada.png" alt="CANADÁ" />
-              <span>Canadá</span>
-            </li>
-            <li class="equipo">
-              <img src="Grupo_B/img/bosnia.png" alt="BOSNIA" />
-              <span>Bosnia</span>
-            </li>
-            <li class="equipo">
-              <img src="Grupo_B/img/catar.png" alt="CATAR" />
-              <span>Catar</span>
-            </li>
-            <li class="equipo">
-              <img src="Grupo_B/img/suiza.png" alt="SUIZA" />
-              <span>Suiza</span>
-            </li>
-          </ul>
+            <div class="equipo-grupo">
+                <h2>Grupo B</h2>
+                <ul class="equipos">
+                    <li class="equipo">
+                        <img src="Grupo_B/img/canada.png" alt="CANADÁ" />
+                        <span>Canadá</span>
+                    </li>
+                    <li class="equipo">
+                        <img src="Grupo_B/img/bosnia.png" alt="BOSNIA" />
+                        <span>Bosnia</span>
+                    </li>
+                    <li class="equipo">
+                        <img src="Grupo_B/img/catar.png" alt="CATAR" />
+                        <span>Catar</span>
+                    </li>
+                    <li class="equipo">
+                        <img src="Grupo_B/img/suiza.png" alt="SUIZA" />
+                        <span>Suiza</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <!-- Grupo C -->
-      <div
-        class="tarjeta tarjeta-grande"
-        id="tarjeta-grupo-c"
-        style="cursor: pointer"
-      >
-        <img src="imagenes/GrupoC.webp" class="imagen-fondo" />
+        <!-- Grupo C -->
+        <div class="tarjeta tarjeta-grande" id="tarjeta-grupo-c" style="cursor: pointer">
+            <img src="imagenes/GrupoC.webp" class="imagen-fondo" />
 
-        <div class="equipo-grupo">
-          <h2>Grupo C</h2>
-          <ul class="equipos">
-            <li class="equipo">
-              <img src="Grupo_C/img/Brazil.webp" alt="Brasil" />
-              <span>Brasil</span>
-            </li>
-            <li class="equipo">
-              <img src="Grupo_C/img/Ecocia.webp" alt="Escocia" />
-              <span>Escocia</span>
-            </li>
-            <li class="equipo">
-              <img src="Grupo_C/img/haiti.webp" alt="Haiti" />
-              <span>Haiti</span>
-            </li>
-            <li class="equipo">
-              <img src="Grupo_C/img/Maruecos.webp" alt="Maruecos" />
-              <span>Maruecos</span>
-            </li>
-          </ul>
+            <div class="equipo-grupo">
+                <h2>Grupo C</h2>
+                <ul class="equipos">
+                    <li class="equipo">
+                        <img src="Grupo_C/img/Brazil.webp" alt="Brasil" />
+                        <span>Brasil</span>
+                    </li>
+                    <li class="equipo">
+                        <img src="Grupo_C/img/Ecocia.webp" alt="Escocia" />
+                        <span>Escocia</span>
+                    </li>
+                    <li class="equipo">
+                        <img src="Grupo_C/img/haiti.webp" alt="Haiti" />
+                        <span>Haiti</span>
+                    </li>
+                    <li class="equipo">
+                        <img src="Grupo_C/img/Maruecos.webp" alt="Maruecos" />
+                        <span>Maruecos</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
 
-      <div
-        class="tarjeta tarjeta-grande"
-        id="tarjeta-grupo-d"
-        style="cursor: pointer"
-      >
-        <img src="imagenes/prueba.jpg" class="imagen-fondo" />
+        <div class="tarjeta tarjeta-grande" id="tarjeta-grupo-d" style="cursor: pointer">
+            <img src="imagenes/prueba.jpg" class="imagen-fondo" />
 
-        <div class="equipo-grupo">
-          <h2>Grupo D</h2>
-          <ul class="equipos">
-            <li class="equipo">
-              <img src="Grupo_D/img/banderaUSA.png" alt="USA" />
-              <span>Estados Unidos</span>
-            </li>
-            <li class="equipo">
-              <img src="Grupo_D/img/banderaParaguay.png" alt="Paraguay" />
-              <span>Paraguay</span>
-            </li>
-            <li class="equipo">
-              <img src="Grupo_D/img/banderaAustralia.png" alt="Australia" />
-              <span>Australia</span>
-            </li>
-            <li class="equipo">
-              <img src="Grupo_D/img/banderaTurquia.png" alt="Turquia" />
-              <span>Turquia</span>
-            </li>
-          </ul>
+            <div class="equipo-grupo">
+                <h2>Grupo D</h2>
+                <ul class="equipos">
+                    <li class="equipo">
+                        <img src="Grupo_D/img/banderaUSA.png" alt="USA" />
+                        <span>Estados Unidos</span>
+                    </li>
+                    <li class="equipo">
+                        <img src="Grupo_D/img/banderaParaguay.png" alt="Paraguay" />
+                        <span>Paraguay</span>
+                    </li>
+                    <li class="equipo">
+                        <img src="Grupo_D/img/banderaAustralia.png" alt="Australia" />
+                        <span>Australia</span>
+                    </li>
+                    <li class="equipo">
+                        <img src="Grupo_D/img/banderaTurquia.png" alt="Turquia" />
+                        <span>Turquia</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
 
-      <div
-        class="tarjeta tarjeta-grande"
-        id="tarjeta-grupo-e"
-        style="cursor: pointer"
-      >
-        <img src="imagenes/GrupoE.jpg" class="imagen-fondo" />
+        <div class="tarjeta tarjeta-grande" id="tarjeta-grupo-e" style="cursor: pointer">
+            <img src="imagenes/GrupoE.jpg" class="imagen-fondo" />
 
-        <div class="tarjeta-equipo">
-          <h2>Grupo E</h2>
-          <ul class="equipos">
-            <li class="equipo">
-              <img src="Grupo_E/img/Alemania.png" alt="Alemania" />
-              <span>Alemania</span>
-            </li>
-            <li class="equipo">
-              <img src="Grupo_E/img/Curazao.png" alt="Curazao" />
-              <span>Curazao</span>
-            </li>
-            <li class="equipo">
-              <img
-                src="Grupo_E/img/Costa de Marfil.png"
-                alt="Costa de Marfil"
-              />
-              <span>Costa de Marfil</span>
-            </li>
-            <li class="equipo">
-              <img src="Grupo_E/img/Ecuador.png" alt="Ecuador" />
-              <span>Ecuador</span>
-            </li>
-          </ul>
+            <div class="tarjeta-equipo">
+                <h2>Grupo E</h2>
+                <ul class="equipos">
+                    <li class="equipo">
+                        <img src="Grupo_E/img/Alemania.png" alt="Alemania" />
+                        <span>Alemania</span>
+                    </li>
+                    <li class="equipo">
+                        <img src="Grupo_E/img/Curazao.png" alt="Curazao" />
+                        <span>Curazao</span>
+                    </li>
+                    <li class="equipo">
+                        <img src="Grupo_E/img/Costa de Marfil.png" alt="Costa de Marfil" />
+                        <span>Costa de Marfil</span>
+                    </li>
+                    <li class="equipo">
+                        <img src="Grupo_E/img/Ecuador.png" alt="Ecuador" />
+                        <span>Ecuador</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
 
-      <div
-        class="tarjeta tarjeta-grande"
-        id="tarjeta-grupo-f"
-        style="cursor: pointer"
-      >
-        <img src="imagenes/grupoE.png" class="imagen-fondo" />
+        <div class="tarjeta tarjeta-grande" id="tarjeta-grupo-f" style="cursor: pointer">
+            <img src="imagenes/grupoE.png" class="imagen-fondo" />
 
-        <div class="equipo-grupo">
-          <h2>Grupo F</h2>
-          <ul class="equipos">
-            <li class="equipo">
-              <img src="Grupo_F/img/países-bajos.png" alt="Países Bajos" />
-              <span>Países Bajos</span>
-            </li>
-            <li class="equipo">
-              <img src="Grupo_F/img/japón.png" alt="Japón" />
-              <span>JAPÓN</span>
-            </li>
-            <li class="equipo">
-              <img src="Grupo_F/img/suecia.png" alt="Suecia" />
-              <span>Suecia</span>
-            </li>
-            <li class="equipo">
-              <img src="Grupo_F/img/túnez.png" alt="Túnez" />
-              <span>Túnez</span>
-            </li>
-          </ul>
+            <div class="equipo-grupo">
+                <h2>Grupo F</h2>
+                <ul class="equipos">
+                    <li class="equipo">
+                        <img src="Grupo_F/img/países-bajos.png" alt="Países Bajos" />
+                        <span>Países Bajos</span>
+                    </li>
+                    <li class="equipo">
+                        <img src="Grupo_F/img/japón.png" alt="Japón" />
+                        <span>JAPÓN</span>
+                    </li>
+                    <li class="equipo">
+                        <img src="Grupo_F/img/suecia.png" alt="Suecia" />
+                        <span>Suecia</span>
+                    </li>
+                    <li class="equipo">
+                        <img src="Grupo_F/img/túnez.png" alt="Túnez" />
+                        <span>Túnez</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </div>
     <footer class="footer-equipo">
-      <div class="footer-contenido">
-        <div class="footer-info">
-          <h3>Proyecto Mundial 2026</h3>
+        <div class="footer-contenido">
+            <div class="footer-info">
+                <h3>Proyecto Mundial 2026</h3>
 
-          <p><strong>Integrantes del Equipo:</strong></p>
+                <p><strong>Integrantes del Equipo:</strong></p>
 
-          <ul>
-             <a href="integrantes.html" target="_blank"
-              ><li>Equipo de Desarrollo</li></a
-            >
-            
-            <li>Grupo A</li>
-            <li>Grupo B</li>
-            <a href="Grupo_C/paginas/grupoC.html" target="_blank"
-              ><li>Grupo C</li></a
-            >
-            <li>Grupo D</li>
-            <li>Grupo E</li>
-            <li>Grupo F</li>
-           </ul>
+                <ul>
+                    <a href="integrantes.html" target="_blank">
+                        <li>Galo Cisneros</li>
+                    </a>
+                    <a href="integrantes.html" target="_blank">
+                        <li>Carlos Chávez</li>
+                    </a>
+                    <a href="integrantes.html" target="_blank">
+                        <li>José López</li>
+                    </a>
+                    <a href="index.html" target="_blank">
+                        <li>Alan Chanatasig</li>
+                    </a>
+                    <a href="integrantes.html" target="_blank">
+                        <li>Evelyn Borja</li>
+                    </a>
+                    <a href="integrantes.html" target="_blank">
+                        <li>Carlos López</li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="footer-imagen">
+                <!-- Aquí coloca la imagen grupal -->
+                <img src="imagenes/juntos.png" alt="Equipo Mundial 2026" />
+            </div>
         </div>
 
-        <div class="footer-imagen">
-          <!-- Aquí coloca la imagen grupal -->
-          <img src="imagenes/juntos.png" alt="Equipo Mundial 2026" />
+        <div class="footer-copy">
+            <p>© 2026 Proyecto Mundial 2026 | Todos los derechos reservados</p>
         </div>
-      </div>
-
-      <div class="footer-copy">
-        <p>© 2026 Proyecto Mundial 2026 | Todos los derechos reservados</p>
-      </div>
     </footer>
     <script src="mundial.js"></script>
-  </body>
+</body>
+
 </html>

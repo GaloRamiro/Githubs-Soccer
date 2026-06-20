@@ -22,6 +22,15 @@ body {
     min-height: 100vh;
 }
 
+/* LOGO */
+
+.logo img {
+    height: 70px;
+    display: block;
+    margin-left: 20px;
+}
+
+
 /* =========================
    ENCABEZADO
 ========================= */
