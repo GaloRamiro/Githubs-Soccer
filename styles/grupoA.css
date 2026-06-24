@@ -87,17 +87,57 @@ HERO
     align-items: center;
     overflow: hidden;
 
+    /* background:
+        linear-gradient(90deg,
+            rgba(1, 8, 25, .94) 0%,
+            rgba(1, 8, 25, .82) 35%,
+            rgba(1, 8, 25, .45) 70%,
+            rgba(1, 8, 25, .12) 100%),
+        url('../Grupo_A/img/bannerMexico.png'); */
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.portada.mexico {
     background:
         linear-gradient(90deg,
             rgba(1, 8, 25, .94) 0%,
             rgba(1, 8, 25, .82) 35%,
             rgba(1, 8, 25, .45) 70%,
             rgba(1, 8, 25, .12) 100%),
-        url('../imagenes/fondoCopaa.png');
+        url('../Grupo_A/img/bannerMexico.png');
+}
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.portada.sudafrica {
+    background:
+        linear-gradient(90deg,
+            rgba(1, 8, 25, .94) 0%,
+            rgba(1, 8, 25, .82) 35%,
+            rgba(1, 8, 25, .45) 70%,
+            rgba(1, 8, 25, .12) 100%),
+        url('../Grupo_A/img/bannerSudafrica.png');
+}
+
+.portada.corea {
+    background:
+        linear-gradient(90deg,
+            rgba(1, 8, 25, .94) 0%,
+            rgba(1, 8, 25, .82) 35%,
+            rgba(1, 8, 25, .45) 70%,
+            rgba(1, 8, 25, .12) 100%),
+        url('../Grupo_A/img/bannerCorea.png');
+}
+
+.portada.chequia {
+    background:
+        linear-gradient(90deg,
+            rgba(1, 8, 25, .94) 0%,
+            rgba(1, 8, 25, .82) 35%,
+            rgba(1, 8, 25, .45) 70%,
+            rgba(1, 8, 25, .12) 100%),
+        url('../Grupo_A/img/bannerChequia.png');
 }
 
 /* ocultar elementos viejos */
@@ -119,7 +159,7 @@ HERO
 
 .contenido-portada h1 {
     font-family: 'Oswald', sans-serif;
-    font-size: 180px;
+    font-size: 166px;
     line-height: .88;
     font-weight: 700;
     letter-spacing: 2px;
@@ -155,6 +195,7 @@ BANDERAS
 }
 
 .tarjeta-equipo {
+    margin-top: 20px;
     width: 115px;
     text-align: center;
 }
@@ -866,7 +907,7 @@ PALMARÉS BRASIL
 
 .titulos {
     width: 92%;
-    margin: 80px auto;
+    margin: 50px auto;
 }
 
 .titulos-grid {
