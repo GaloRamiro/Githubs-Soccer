@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #020d22;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================
+barra-navegacion
+========================= */
+.barra-navegacion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 100;
+}
+
+.logo img {
+    height: 52px;
+    display: block;
+}
+
+.menu-navegacion {
+    display: flex;
+    gap: 35px;
+}
+
+.menu-navegacion a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    opacity: .95;
+    transition: .3s;
+}
+
+.menu-navegacion a:hover {
+    color: #ffcc00; /* Amarillo Ecuador */
+}
+
+.boton-grupo {
+    border: 1px solid #ffcc00;
+    border-radius: 12px;
+    padding: 10px 18px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #ffcc00;
+    transition: .3s;
+}
+
+.boton-grupo:hover {
+    background: #ffcc00;
+    color: #020d22;
+}
+
+/* =========================
+HERO (Ecuador)
+========================= */
+.portada {
+    position: relative;
+    min-height: 760px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg,
+            rgba(2, 13, 34, 0.96) 0%,
+            rgba(2, 13, 34, 0.85) 35%,
+            rgba(2, 13, 34, 0.50) 70%,
+            rgba(2, 13, 34, 0.15) 100%),
+        url('../imagenes/bannerEcuador.png'); /* Banner personalizado */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fondo-portada, .superposicion-portada {
+    display: none;
+}
+
+.contenido-portada {
+    position: relative;
+    z-index: 10;
+    width: 55%;
+    padding-left: 125px;
+    padding-top: 70px;
+}
+
+.contenido-portada h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 200px;
+    line-height: .88;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.contenido-portada h1 span {
+    color: #0033a0; /* Azul de la bandera */
+}
+
+.contenido-portada h2 {
+    color: #ffcc00; /* Amarillo de la bandera */
+    margin-top: 20px;
+    letter-spacing: 5px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.contenido-portada p {
+    margin-top: 18px;
+    line-height: 1.7;
+    color: #e4e8ef;
+    font-size: 15px;
+}
+
+/* =========================
+BANDERAS
+========================= */
+.fila-equipos {
+    display: flex;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.tarjeta-equipo {
+    width: 115px;
+    text-align: center;
+}
+
+.tarjeta-equipo img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+.tarjeta-equipo h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: 'Oswald';
+    letter-spacing: 1px;
+}
+
+.tarjeta-equipo span {
+    color: #ffcc00;
+}
+
+/* =========================
+SEDES / PANELES
+========================= */
+.sedes {
+    margin: 0px auto 0;
+    width: 92%;
+    background: #02112b;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 18px;
+    padding: 22px;
+    position: relative;
+    z-index: 8;
+}
+
+.section-title h2 {
+    font-family: 'Oswald';
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.section-title p {
+    color: #cfd4dd;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.sedes-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-top: 18px;
+}
+
+.tarjeta-sede {
+    background: #071834;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .08);
+    transition: .3s;
+}
+
+.tarjeta-sede:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 204, 0, 0.35);
+}
+
+.tarjeta-sede img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+}
+
+.tarjeta-sede h3 {
+    padding: 14px 14px 0;
+    font-family: 'Oswald';
+    font-size: 18px;
+}
+
+.tarjeta-sede p {
+    padding: 5px 14px;
+    font-size: 13px;
+    color: #cfd4dd;
+}
+
+.tarjeta-sede span {
+    display: block;
+    padding: 0 14px 14px;
+    color: #ffcc00;
+    font-weight: 700;
+}
+
+.seccion-doble {
+    width: 92%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.panel {
+    background: #03152f;
+    border-radius: 18px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, .08);
+}
+
+.panel h2 {
+    font-family: 'Oswald';
+    margin-bottom: 22px;
+}
+
+.text-block h3 {
+    margin-top: 12px;
+    color: #ffcc00;
+}
+
+/* =========================
+CANCHA Y JUGADORES
+========================= */
+.alineacion {
+    width: 92%;
+    margin: 80px auto;
+}
+
+.cancha {
+    background: #0f3020;
+    min-height: 900px;
+    border-radius: 25px;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, .1);
+    overflow: hidden;
+}
+
+.jugador {
+    position: absolute;
+    text-align: center;
+    width: 100px;
+}
+
+.jugador img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #0033a0; /* Borde azul para jugadores de Ecuador */
+}
+
+.jugador h4 {
+    color: white;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.jugador span {
+    color: #ffcc00;
+}
+
+/* Posiciones fijas */
+.delantero-izq{top:80px;left:15%;}
+.delantero-centro{top:40px;left:50%;transform:translateX(-50%);}
+.delantero-der{top:80px;right:15%;}
+.medio-izq{top:260px;left:22%;}
+.medio-centro{top:220px;left:50%;transform:translateX(-50%);}
+.medio-der{top:260px;right:22%;}
+.defensa-izq{top:500px;left:10%;}
+.central-1{top:450px;left:35%;}
+.central-2{top:450px;right:35%;}
+.defensa-der{top:500px;right:10%;}
+.portero{bottom:40px;left:50%;transform:translateX(-50%);}
+
+/* =========================
+PALMARÉS Y LEYENDAS
+========================= */
+.titulos {
+    width: 92%;
+    margin: 80px auto;
+}
+
+.titulos-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.titulo-card {
+    background: #071834;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    transition: .3s;
+}
+
+.titulo-card:hover {
+    transform: translateY(-8px);
+    border-color: #ffcc00;
+}
+
+.titulo-card h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.leyendas {
+    width: 92%;
+    margin: 80px auto;
+}
+
+.jugadores-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.jugador-card {
+    background: #071834;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    transition: .3s;
+}
+
+.jugador-card:hover {
+    transform: translateY(-8px);
+    border-color: #ffcc00;
+}
+
+.jugador-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.jugador-card h3 {
+    margin-top: 15px;
+    color: white;
+}
+
+.jugador-card span {
+    display: block;
+    color: #ffcc00;
+    margin: 10px 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* =========================
+FOOTER
+========================= */
+.pie-pagina {
+    background:
+        linear-gradient(rgba(2, 13, 34, .75),
+            rgba(2, 13, 34, .75)),
+        url('../imagenes/fondoCopaa.png');
+    background-size: cover;
+    background-position: center;
+    padding: 35px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.texto-pie h2 {
+    font-family: 'Oswald';
+    font-size: 32px;
+    line-height: 1;
+    color: white;
+}
+
+.logo-pie img {
+    height: 70px;
+    width: auto;
+    display: block;
+}
+
+/* =========================
+RESPONSIVE COMPLETO
+========================= */
+@media(max-width:1100px) {
+    .contenido-portada { width: 70%; }
+    .seccion-doble { grid-template-columns: 1fr; }
+}
+
+@media(max-width:1024px) {
+    .titulos-grid { grid-template-columns: repeat(3, 1fr); }
+    .jugadores-grid { grid-template-columns: repeat(2, 1fr); }
+    .jugador-card img { height: 260px; }
+    .cancha { min-height: 750px; }
+    .jugador { width: 85px; }
+    .jugador img { width: 75px; height: 75px; }
+    .jugador h4 { font-size: 12px; }
+}
+
+@media(max-width:768px) {
+    .portada { min-height: auto; padding: 120px 0 80px; }
+    .contenido-portada { width: 100%; padding: 120px 25px 0; }
+    .contenido-portada h1 { font-size: 90px; }
+    .contenido-portada h2 { font-size: 15px; letter-spacing: 3px; }
+    .titulos, .leyendas, .alineacion { width: 96%; }
+    .titulos-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .jugadores-grid { grid-template-columns: 1fr; gap: 20px; }
+    .pie-pagina { flex-direction: column; gap: 25px; text-align: center; }
+    .cancha { min-height: 650px; padding: 10px; }
+    .jugador { width: 70px; }
+    .jugador img { width: 60px; height: 60px; border-width: 3px; }
+    .jugador h4 { font-size: 10px; }
+    .jugador span { font-size: 9px; }
+    
+    /* Reubicación posiciones responsivas de la cancha */
+    .delantero-izq { top: 70px; left: 8%; }
+    .delantero-centro { top: 30px; left: 50%; }
+    .delantero-der { top: 70px; right: 8%; }
+    .medio-izq { top: 200px; left: 15%; }
+    .medio-centro { top: 170px; left: 50%; }
+    .medio-der { top: 200px; right: 15%; }
+    .defensa-izq { top: 380px; left: 5%; }
+    .central-1 { top: 340px; left: 28%; }
+    .central-2 { top: 340px; right: 28%; }
+    .defensa-der { top: 380px; right: 5%; }
+    .portero { bottom: 25px; left: 50%; }
+}
+
+@media(max-width:480px) {
+    .titulos-grid { grid-template-columns: 1fr; }
+    .cancha { min-height: 580px; }
+    .jugador { width: 60px; }
+    .jugador img { width: 50px; height: 50px; }
+    .jugador h4 { font-size: 9px; }
+    .jugador span { font-size: 8px; }
+}
