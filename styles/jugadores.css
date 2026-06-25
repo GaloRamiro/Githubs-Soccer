@@ -1,74 +1,193 @@
-<!DOCTYPE html>
-<html lang="es">
+/* ==========================
+   RESET
+========================== */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Álbum Mundial 2026</title>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <link rel="icon" href="imagenes/LogoDev.svg">
-    <link rel="stylesheet" href="jugadores.css">
-</head>
+/* ==========================
+   BODY
+========================== */
 
-<body>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #08121f;
+    color: white;
+}
 
-    <header class="cabecera">
-        <h1>ÁLBUM MUNDIAL 2026</h1>
-        <p>Colección Oficial de Cromos</p>
-    </header>
+/* ==========================
+   CABECERA
+========================== */
 
-    <!-- FILTROS (los utilizará José) -->
-    <section class="herramientas">
+.cabecera{
+    text-align: center;
+    padding: 50px 20px;
+}
 
-        <input type="text"
-               id="buscarJugador"
-               placeholder="Buscar jugador...">
+.cabecera h1{
+    font-size: 3rem;
+    color: #f4c804;
+    margin-bottom: 10px;
+}
 
-        <select id="filtroPais">
-            <option value="">Todos los países</option>
-        </select>
+.cabecera p{
+    color: #cccccc;
+    font-size: 1.1rem;
+}
 
-    </section>
+/* ==========================
+   HERRAMIENTAS
+========================== */
 
-    <!-- CONTADOR (lo utilizará Alan) -->
-    <section class="estadisticas">
+.herramientas{
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
 
-        <h3>Cromos desbloqueados:</h3>
+    display: flex;
+    gap: 20px;
+}
 
-        <div id="porcentajeDesbloqueado">
-            0%
-        </div>
+.herramientas input,
+.herramientas select{
+    flex: 1;
 
-    </section>
+    padding: 12px;
 
-    <!-- TOTAL GOLES (lo utilizará Evelyn) -->
-    <section class="goles-container">
+    border: none;
+    border-radius: 10px;
 
-        <h3>Total de goles:</h3>
+    font-size: 1rem;
+}
 
-        <div id="totalGoles">
-            0
-        </div>
+/* ==========================
+   ESTADÍSTICAS
+========================== */
 
-    </section>
+.estadisticas,
+.goles-container{
 
-    <!-- ÁLBUM DINÁMICO -->
-    <section class="album-container">
+    max-width: 1000px;
 
-        <div id="album"></div>
+    margin: auto;
 
-    </section>
+    padding: 15px 20px;
 
-    <footer class="footer-album">
+    display: flex;
 
-        <p>Proyecto Mundial 2026 • KRAKEDEV</p>
+    justify-content: space-between;
 
-        <p>Desarrollo colaborativo mediante Git Flow</p>
+    align-items: center;
+}
 
-    </footer>
+#porcentajeDesbloqueado,
+#totalGoles{
+    font-size: 1.4rem;
+    color: #f4c804;
+    font-weight: bold;
+}
 
-    <script src="jugadores.js"></script>
+/* ==========================
+   ÁLBUM
+========================== */
 
-</body>
+.album-container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
 
-</html>
+#album{
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 25px;
+}
+
+/* ==========================
+   TARJETAS
+========================== */
+
+.card-cromo{
+
+    background: #122033;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.4);
+
+    transition: .3s;
+}
+
+.card-cromo:hover{
+    transform: translateY(-5px);
+}
+
+.foto-jugador{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.contenido-cromo{
+    padding: 20px;
+}
+
+.bandera{
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.contenido-cromo h2{
+    margin-bottom: 10px;
+    color: #f4c804;
+}
+
+.contenido-cromo p{
+    margin-bottom: 8px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer-album{
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    background: #111827;
+}
+
+.footer-album p{
+    margin: 5px 0;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    .herramientas{
+        flex-direction: column;
+    }
+
+    .estadisticas,
+    .goles-container{
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .cabecera h1{
+        font-size: 2.2rem;
+    }
+}
