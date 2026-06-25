@@ -70,3 +70,21 @@ function renderizarAlbum() {
         `;
   });
 }
+
+cromosMundial.push(
+    crearJugador(
+        1,
+        "Jugador Demo",
+        "Ecuador",
+        "Delantero",
+        "imagenes/jugador.png",
+        "imagenes/ecuador.png",
+        "#F4C804",
+        20,
+        50,
+        true,
+        "Jugador de prueba"
+    )
+);
+
+renderizarAlbum();
