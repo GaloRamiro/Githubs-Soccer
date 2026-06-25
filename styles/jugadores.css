@@ -1,0 +1,194 @@
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================
+   BODY
+========================== */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #08121f;
+    color: white;
+}
+
+/* ==========================
+   CABECERA
+========================== */
+
+.cabecera{
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cabecera h1{
+    font-size: 3rem;
+    color: #f4c804;
+    margin-bottom: 10px;
+}
+
+.cabecera p{
+    color: #cccccc;
+    font-size: 1.1rem;
+}
+
+/* ==========================
+   HERRAMIENTAS
+========================== */
+
+.herramientas{
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+
+    display: flex;
+    gap: 20px;
+}
+
+.herramientas input,
+.herramientas select{
+    flex: 1;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 1rem;
+}
+
+/* ==========================
+   ESTADÍSTICAS
+========================== */
+
+.estadisticas,
+.goles-container{
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 15px 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+#porcentajeDesbloqueado,
+#totalGoles{
+    font-size: 1.4rem;
+    color: #f4c804;
+    font-weight: bold;
+}
+
+/* ==========================
+   ÁLBUM
+========================== */
+
+.album-container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
+
+#album{
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 25px;
+}
+
+/* ==========================
+   TARJETAS
+========================== */
+
+.card-cromo{
+
+    background: #122033;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.4);
+
+    transition: .3s;
+}
+
+.card-cromo:hover{
+    transform: translateY(-5px);
+}
+
+.foto-jugador{
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    background: white;
+}
+
+.contenido-cromo{
+    padding: 20px;
+}
+
+.bandera{
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.contenido-cromo h2{
+    margin-bottom: 10px;
+    color: #f4c804;
+}
+
+.contenido-cromo p{
+    margin-bottom: 8px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer-album{
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    background: #111827;
+}
+
+.footer-album p{
+    margin: 5px 0;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    .herramientas{
+        flex-direction: column;
+    }
+
+    .estadisticas,
+    .goles-container{
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .cabecera h1{
+        font-size: 2.2rem;
+    }
+}
