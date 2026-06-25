@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum Mundial 2026</title>
+
+    <link rel="icon" href="imagenes/LogoDev.svg">
+    <link rel="stylesheet" href="jugadores.css">
+</head>
+
+<body>
+
+    <header class="cabecera">
+        <h1>ÁLBUM MUNDIAL 2026</h1>
+        <p>Colección Oficial de Cromos</p>
+    </header>
+
+    <!-- FILTROS (los utilizará José) -->
+    <section class="herramientas">
+
+        <input type="text"
+               id="buscarJugador"
+               placeholder="Buscar jugador...">
+
+        <select id="filtroPais">
+            <option value="">Todos los países</option>
+        </select>
+
+    </section>
+
+    <!-- CONTADOR (lo utilizará Alan) -->
+    <section class="estadisticas">
+
+        <h3>Cromos desbloqueados:</h3>
+
+        <div id="porcentajeDesbloqueado">
+            0%
+        </div>
+
+    </section>
+
+    <!-- TOTAL GOLES (lo utilizará Evelyn) -->
+    <section class="goles-container">
+
+        <h3>Total de goles:</h3>
+
+        <div id="totalGoles">
+            0
+        </div>
+
+    </section>
+
+    <!-- ÁLBUM DINÁMICO -->
+    <section class="album-container">
+
+        <div id="album"></div>
+
+    </section>
+
+    <footer class="footer-album">
+
+        <p>Proyecto Mundial 2026 • KRAKEDEV</p>
+
+        <p>Desarrollo colaborativo mediante Git Flow</p>
+
+    </footer>
+
+    <script src="jugadores.js"></script>
+
+</body>
+
+</html>
