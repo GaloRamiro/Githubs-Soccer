@@ -3,6 +3,7 @@
 // ==========================
 
 const cromosMundial = [];
+
 function crearJugador(
   id,
   nombre,
@@ -34,40 +35,26 @@ function crearJugador(
     curiosidad,
   };
 }
-function renderizarAlbum() {
+
+function renderizarAlbum(arregloAFiltrar = cromosMundial) {
   const album = document.getElementById("album");
 
   album.innerHTML = "";
 
-  cromosMundial.forEach((jugador) => {
+  arregloAFiltrar.forEach((jugador) => {
     album.innerHTML += `
-            <div class="card-cromo">
-
-                <img
-                    src="${jugador.urlImagen}"
-                    alt="${jugador.nombre}"
-                    class="foto-jugador">
-
-                <div class="contenido-cromo">
-
-                    <img
-                        src="${jugador.urlBandera}"
-                        class="bandera">
-
-                    <h2>${jugador.nombre}</h2>
-
-                    <p>${jugador.pais}</p>
-
-                    <p>${jugador.posicion}</p>
-
-                    <p>⚽ ${jugador.estadisticas.goles}</p>
-
-                    <p>🎮 ${jugador.estadisticas.partidos}</p>
-
-                </div>
-
-            </div>
-        `;
+      <div class="card-cromo bloqueado" data-id="${jugador.id}" style="background-color: ${jugador.colorFondoHex}">
+        <img src="${jugador.urlImagen}" alt="${jugador.nombre}" class="foto-jugador">
+        <div class="contenido-cromo">
+          <img src="${jugador.urlBandera}" class="bandera">
+          <h2>${jugador.nombre}</h2>
+          <p>${jugador.pais}</p>
+          <p>${jugador.posicion}</p>
+          <p>⚽ ${jugador.estadisticas.goles}</p>
+          <p>🎮 ${jugador.estadisticas.partidos}</p>
+        </div>
+      </div>
+    `;
   });
 }
 
@@ -88,3 +75,45 @@ cromosMundial.push(
 );
 
 renderizarAlbum();
+
+// ==========================
+// FILTROS — José López
+// feature/filtros-busqueda-album
+// ==========================
+
+
+function poblarSelectorPaises() {
+  const select = document.getElementById("filtroPais");
+
+
+  const paisesUnicos = [...new Set(cromosMundial.map((j) => j.pais))].sort();
+
+
+  paisesUnicos.forEach((pais) => {
+    const opcion = document.createElement("option");
+    opcion.value = pais;
+    opcion.textContent = pais;
+    select.appendChild(opcion);
+  });
+}
+
+
+function filtrarYMostrar() {
+  const textoBuscado = document.getElementById("buscarJugador").value.toLowerCase();
+  const paisSeleccionado = document.getElementById("filtroPais").value;
+
+
+  const jugadoresFiltrados = cromosMundial.filter((jugador) => {
+    const coincideNombre = jugador.nombre.toLowerCase().includes(textoBuscado);
+    const coincidePais = paisSeleccionado === "" || jugador.pais === paisSeleccionado;
+    return coincideNombre && coincidePais;
+  });
+
+  renderizarAlbum(jugadoresFiltrados);
+}
+
+document.getElementById("buscarJugador").addEventListener("input", filtrarYMostrar);
+document.getElementById("filtroPais").addEventListener("change", filtrarYMostrar);
+
+
+poblarSelectorPaises();
