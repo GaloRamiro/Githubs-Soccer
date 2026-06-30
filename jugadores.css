@@ -1,0 +1,212 @@
+/* ==========================================================================
+   ESTILOS VISUALES COMPLEMENTARIOS (jugadores.css)
+   ========================================================================== */
+
+.seccion-album {
+    max-width: 1200px;
+    margin: 30px auto 80px;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+}
+
+.encabezado-album {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.encabezado-album .subtitulo-album {
+    color: #facc15;
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.encabezado-album h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* MARCADOR DE GOLES */
+.contador-goles-cd {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.contador-goles-cd p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #facc15;
+}
+
+.contador-goles-cd .numero-goles {
+    color: #ffffff;
+    font-size: 1.6rem;
+    margin-left: 10px;
+    font-weight: 800;
+    text-shadow: 0 0 10px rgba(250, 204, 21, 0.5);
+}
+
+/* REJILLA RESPONSIVA */
+.contenedor-cromos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/* ESTILO COLECCIONISTA DE CROMOS */
+.cromo-card {
+    position: relative;
+    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.cromo-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 6px;
+    background: var(--color-pais);
+}
+
+.cromo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5), 0 0 15px var(--color-pais);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.cromo-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.cromo-bandera {
+    width: 35px;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cromo-pais-nombre {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* CONTENEDOR DE FOTO FIJO SEGURO */
+.cromo-foto-wrapper {
+    width: 100%;
+    height: 210px;
+    background: #020617;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.cromo-foto {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.cromo-info {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.cromo-nombre {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.cromo-posicion {
+    color: #facc15;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* CAJA DE ESTADÍSTICAS */
+.cromo-estadisticas {
+    display: flex;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-box:first-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-valor {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.stat-etiqueta {
+    color: #64748b;
+    font-size: 0.75rem;
+}
+
+.cromo-id {
+    position: absolute;
+    bottom: 12px;
+    right: 15px;
+    font-size: 0.75rem;
+    color: #475569;
+    font-weight: bold;
+}
+
+/* JUGADORES DESTACADOS (CRACKS) */
+.cromo-destacado {
+    border: 2px solid #facc15;
+}
+
+.insignia-top {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #facc15;
+    color: #020617;
+    font-size: 0.65rem;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    z-index: 2;
+}
