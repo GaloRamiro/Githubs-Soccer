@@ -34,21 +34,107 @@ function crearJugador(
   };
 }
 
-// 1. Registro del Jugador Demo Inicial
+// 1. Registro del Jugador Demo Inicial (Removido el duplicado para evitar conflictos de ID)
+
+// ==========================
+// Desarrollador de Contenido Dinámico - Grupo A y B — Carlos Chávez
+// feature/datos-dinamicos-grupo-ab
+// ==========================
+
 cromosMundial.push(
   crearJugador(
     1,
-    "Jugador Demo",
-    "Ecuador",
+    "Álvaro Fidalgo",
+    "México",
+    "Mediocampista",
+    "../imagenes/cromos/FIDALGO-Alvaro.png",
+    "../Grupo_A/img/banderaMexico.png",
+    "#00A859",
+    8,
+    0,
+    false,
+    "Club América"
+  )
+);
+
+cromosMundial.push(
+  crearJugador(
+    2,
+    "Ronwen Williams",
+    "Sudáfrica",
+    "Portero",
+    "../imagenes/cromos/WILLIAMS-Ronwen.png",
+    "../Grupo_A/img/banderaSudafrica.png",
+    "#007847",
+    1,
+    0,
+    false,
+    "Mamelodi Sundowns"
+  )
+);
+
+cromosMundial.push(
+  crearJugador(
+    3,
+    "Son Heung-min",
+    "Corea del Sur",
     "Delantero",
-    "../imagenes/cromos/E1 William Pacho.jpg",
-    "../Grupo_C/img/Maruecos.webp",
-    "#F4C804",
-    20,
-    50,
+    "../imagenes/cromos/SON-Heungmin.png",
+    "../Grupo_A/img/banderaCorea.png",
+    "#CD2E3A",
+    7,
+    0,
     true,
-    "Jugador de prueba",
-  ),
+    "Tottenham Hotspur"
+  )
+);
+
+cromosMundial.push(
+  crearJugador(
+    4,
+    "Patrik Schick",
+    "República Checa",
+    "Delantero",
+    "../imagenes/cromos/Patrik Schick.png",
+    "../Grupo_A/img/banderaCheca.png",
+    "#D7141A",
+    10,
+    0,
+    true,
+    "Bayer Leverkusen"
+  )
+);
+
+cromosMundial.push(
+  crearJugador(
+    5,
+    "Jonathan David",
+    "Canadá",
+    "Delantero",
+    "../imagenes/cromos/DAVID-Jonathan.png",
+    "../Grupo_B/img/canada.png",
+    "#FF0000",
+    10,
+    3,
+    true,
+    "LOSC Lille"
+  )
+);
+
+cromosMundial.push(
+  crearJugador(
+    6,
+    "Johan Manzambi",
+    "Suiza",
+    "Defensa",
+    "../imagenes/cromos/MANZAMBI-Johan.png",
+    "../Grupo_B/img/suiza.png",
+    "#FF0000",
+    9,
+    3,
+    false,
+    "Joven talento"
+  )
 );
 
 // 2. TRABAJO DE EVELYN: Nuevos Países (IDs obligatorios del 7 al 12)
@@ -157,47 +243,44 @@ function renderizarAlbum(arregloAFiltrar = cromosMundial) {
     `;
   });
 
-
   aplicarFondosDinamicos();
 }
 
+// ============================================================
+// FONDOS DINÁMICOS — CARLOS LÓPEZ 
+// feature/interfaz-fondos-dinamicos
+// ============================================================
 
 function aplicarFondosDinamicos() {
-
+  // 1. Capturamos todas las tarjetas que se encuentran actualmente en el HTML
   const tarjetas = document.querySelectorAll(".card-cromo");
 
   tarjetas.forEach((tarjeta) => {
-
+    // 2. Obtenemos el ID de la tarjeta desde el atributo 'data-id'
     const jugadorId = parseInt(tarjeta.getAttribute("data-id"));
 
+    // 3. Buscamos al objeto jugador correspondiente en nuestro arreglo global
     const jugador = cromosMundial.find((j) => j.id === jugadorId);
 
-
+    // 4. Si el jugador existe y tiene un color definido, aplicamos el estilo inline de forma segura
     if (jugador && jugador.colorFondoHex) {
       tarjeta.style.backgroundColor = jugador.colorFondoHex;
     }
   });
-
 }
-
-
 
 function poblarSelectorPaises() {
   const select = document.getElementById("filtroPais");
-
   
   const paisesUnicos = [...new Set(cromosMundial.map((j) => j.pais))].sort();
 
-
   paisesUnicos.forEach((pais) => {
     const opcion = document.createElement("option");
-    option.value = pais;
-    option.textContent = pais;
+    opcion.value = pais;
+    opcion.textContent = pais;
     select.appendChild(opcion);
   });
-
 }
-
 
 function filtrarYMostrar() {
   const textoBuscado = document.getElementById("buscarJugador").value.toLowerCase();
@@ -220,7 +303,7 @@ function calcularTotalGoles() {
   let acumuladorGoles = 0;
 
   cromosMundial.forEach((jugador) => {
-    acumuladorGoles += jugador.estadisticas.goles;
+    accumuladorGoles += jugador.estadisticas.goles;
   });
 
   const contenedorGoles = document.getElementById("totalGoles");
@@ -229,18 +312,21 @@ function calcularTotalGoles() {
   }
 }
 
+// ==============================================================
+// FLUJO CONTROLADO POR DOMContentLoaded. Modificación solicitada
+// ==============================================================
+
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Primer renderizado completo del álbum
+  // 1. Primer renderizado completo del álbum / activación de fondos iniciales
   renderizarAlbum();
 
-  // 2. Carga del selector de países (incluye nuevos países)
+  // 2. Carga segura del selector de países (incluye nuevos países)
   poblarSelectorPaises();
 
   // 3. Ejecución de tu cálculo matemático de goles
   calcularTotalGoles();
-
   
+  // 4. Escuchadores de eventos reactivos para los filtros de búsqueda
   document.getElementById("buscarJugador").addEventListener("input", filtrarYMostrar);
   document.getElementById("filtroPais").addEventListener("change", filtrarYMostrar);
 });
-
