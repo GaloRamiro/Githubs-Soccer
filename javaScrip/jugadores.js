@@ -56,25 +56,141 @@ function renderizarAlbum(arregloAFiltrar = cromosMundial) {
       </div>
     `;
   });
-
-  aplicarFondosDinamicos();
 }
 
+// ==========================
+// Desarrollador de Contenido Dinámico - Grupo A y B — Carlos Chávez
+// feature/datos-dinamicos-grupo-ab
+// ==========================
+
+// cromosMundial.push(
+//   crearJugador(
+//     1,
+//     "Jugador Demo",
+//     "Ecuador",
+//     "Defensa",
+//     "../imagenes/cromos/E1 William Pacho.jpg",
+//     "../Grupo_E/img/Ecuador.png",
+//     "#F4C804",
+//     20,
+//     50,
+//     true,
+//     "PSG"
+//   )
+// );
+
+// cromosMundial.push(
+//   crearJugador(
+//     1,
+//     "Jugador Demo",
+//     "Ecuador",
+//     "Delantero",
+//     "../imagenes/cromos/E1 William Pacho.jpg",
+//     "../Grupo_C/img/Maruecos.webp",
+//     "#F4C804",
+//     20,
+//     50,
+//     true,
+//     "Jugador de prueba"
+//   )
+// );
+
 cromosMundial.push(
-    crearJugador(
-        1,
-        "Jugador Demo",
-        "Ecuador",
-        "Delantero",
-        "../imagenes/cromos/E1 William Pacho.jpg",
-        "../Grupo_C/img/Maruecos.webp",
-        "#F4C804",
-        20,
-        50,
-        true,
-        "Jugador de prueba"
-    )
+  crearJugador(
+    1,
+    "Álvaro Fidalgo",
+    "México",
+    "Mediocampista",
+    "../imagenes/cromos/FIDALGO-Alvaro.png",
+    "../Grupo_A/img/banderaMexico.png",
+    "#00A859",
+    8,
+    0,
+    false,
+    "Club América"
+  )
 );
+
+cromosMundial.push(
+  crearJugador(
+    2,
+    "Ronwen Williams",
+    "Sudáfrica",
+    "Portero",
+    "../imagenes/cromos/WILLIAMS-Ronwen.png",
+    "../Grupo_A/img/banderaSudafrica.png",
+    "#007847",
+    1,
+    0,
+    false,
+    "Mamelodi Sundowns"
+  )
+);
+
+cromosMundial.push(
+  crearJugador(
+    3,
+    "Son Heung-min",
+    "Corea del Sur",
+    "Delantero",
+    "../imagenes/cromos/SON-Heungmin.png",
+    "../Grupo_A/img/banderaCorea.png",
+    "#CD2E3A",
+    7,
+    0,
+    true,
+    "Tottenham Hotspur"
+  )
+);
+
+cromosMundial.push(
+  crearJugador(
+    4,
+    "Patrik Schick",
+    "República Checa",
+    "Delantero",
+    "../imagenes/cromos/Patrik Schick.png",
+    "../Grupo_A/img/banderaCheca.png",
+    "#D7141A",
+    10,
+    0,
+    true,
+    "Bayer Leverkusen"
+  )
+);
+
+cromosMundial.push(
+  crearJugador(
+    5,
+    "Jonathan David",
+    "Canadá",
+    "Delantero",
+    "../imagenes/cromos/DAVID-Jonathan.png",
+    "../Grupo_B/img/canada.png",
+    "#FF0000",
+    10,
+    3,
+    true,
+    "LOSC Lille"
+  )
+);
+
+cromosMundial.push(
+  crearJugador(
+    6,
+    "Johan Manzambi",
+    "Suiza",
+    "Defensa",
+    "../imagenes/cromos/MANZAMBI-Johan.png",
+    "../Grupo_B/img/suiza.png",
+    "#FF0000",
+    9,
+    3,
+    false,
+    "Joven talento"
+  )
+);
+
 
 // ============================================================
 // FONDOS DINÁMICOS — CARLOS LÓPEZ 
