@@ -219,3 +219,69 @@ body{
         transform: translateY(0);
     }
 }
+
+/* ============================================================
+   SECCIÓN MODIFICADA POR CARLOS LÓPEZ
+   feature/sistema-recompensas-animaciones (COMMIT 1)
+============================================================ */
+
+/* Estado Bloqueado: Oculta la información y aplica desenfoque/escala de grises */
+.card-cromo.bloqueado .foto-jugador {
+    filter: grayscale(100%) brightness(30%);
+    transition: filter 0.5s ease;
+}
+
+.card-cromo.bloqueado .contenido-cromo p,
+.card-cromo.bloqueado .contenido-cromo .bandera {
+    visibility: hidden; /* Oculta datos sin romper el layout */
+}
+
+/* Contenedor del botón de desbloqueo dentro de la tarjeta */
+.btn-desbloquear-container {
+    padding: 0 20px 20px 20px;
+    text-align: center;
+}
+
+/* Botón estilizado moderno */
+.btn-desbloquear {
+    width: 100%;
+    padding: 10px 15px;
+    background: #f4c804;
+    color: #08121f;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-desbloquear:hover {
+    background: #ffe169;
+    transform: scale(1.03);
+}
+
+.btn-desbloquear:active {
+    transform: scale(0.98);
+}
+
+/* Animación de Destello (Flash Effect) al desbloquear */
+.animacion-destello {
+    position: relative;
+    animation: pulsoDestello 0.6s ease-out;
+}
+
+@keyframes pulsoDestello {
+    0% {
+        box-shadow: 0 0 0px rgba(244, 200, 4, 0);
+        filter: brightness(1);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(244, 200, 4, 1);
+        filter: brightness(1.8);
+    }
+    100% {
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        filter: brightness(1);
+    }
+}

@@ -219,17 +219,33 @@ cromosMundial.push(
   ),
 );
 
-// ==========================================
-// RENDERIZADO DEL ÁLBUM VIRTUAL 
-// ==========================================
+// ============================================================
+// RENDERIZADO DEL ÁLBUM VIRTUAL (MODIFICADO EN COMMIT 2)
+// ============================================================
+
+// Sistema de persistencia en localStorage para almacenar IDs desbloqueados
+let cromosDesbloqueados = [];
 
 function renderizarAlbum(arregloAFiltrar = cromosMundial) {
   const album = document.getElementById("album");
   album.innerHTML = "";
 
   arregloAFiltrar.forEach((jugador) => {
+    // Verificamos si este jugador en particular ya está desbloqueado
+    const estaDesbloqueado = cromosDesbloqueados.includes(jugador.id);
+    
+    // Si está desbloqueado no lleva la clase 'bloqueado', si no, sí.
+    const claseBloqueado = estaDesbloqueado ? "" : "bloqueado";
+
+    // Generamos el botón de desbloqueo solo si sigue bloqueado
+    const botonHTML = !estaDesbloqueado 
+      ? `<div class="btn-desbloquear-container">
+           <button class="btn-desbloquear" onclick="desbloquearCromoPorId(${jugador.id})">Desbloquear Cromo</button>
+         </div>`
+      : "";
+
     album.innerHTML += `
-      <div class="card-cromo bloqueado" data-id="${jugador.id}">
+      <div class="card-cromo ${claseBloqueado}" data-id="${jugador.id}" id="cromo-${jugador.id}">
         <img src="${jugador.urlImagen}" alt="${jugador.nombre}" class="foto-jugador" onerror="this.src='../imagenes/LogoDev.svg'">
         <div class="contenido-cromo">
           <img src="${jugador.urlBandera}" class="bandera" onerror="this.src='../imagenes/LogoDev.svg'">
@@ -239,11 +255,13 @@ function renderizarAlbum(arregloAFiltrar = cromosMundial) {
           <p>⚽ Goles: ${jugador.estadisticas.goles}</p>
           <p>🎮 Partidos: ${jugador.estadisticas.partidos}</p>
         </div>
+        ${botonHTML}
       </div>
     `;
   });
 
   aplicarFondosDinamicos();
+  actualizarPorcentajeDesbloqueado(); // Esta función la crearemos en el commit 3
 }
 
 // ============================================================
@@ -312,6 +330,57 @@ function calcularTotalGoles() {
   }
 }
 
+// ============================================================
+// SISTEMA DE RECOMPENSAS Y ESTADÍSTICAS — CARLOS LÓPEZ
+// feature/sistema-recompensas-animaciones (COMMIT 3)
+// ============================================================
+
+function desbloquearCromoPorId(id) {
+  // 1. Evitar duplicados en el arreglo
+  if (!cromosDesbloqueados.includes(id)) {
+    cromosDesbloqueados.push(id);
+    localStorage.setItem("cromosDesbloqueados", JSON.stringify(cromosDesbloqueados));
+  }
+
+  // 2. Capturar el elemento de la tarjeta en el DOM
+  const tarjeta = document.getElementById(`cromo-${id}`);
+  
+  if (tarjeta) {
+    // 3. Añadir clase de animación de destello temporal
+    tarjeta.classList.add("animacion-destello");
+    
+    // 4. Remover el estado visual bloqueado de inmediato para revelar el cromo
+    tarjeta.classList.remove("bloqueado");
+
+    // 5. Remover el contenedor del botón para que desaparezca limpiamente
+    const contenedorBoton = tarjeta.querySelector(".btn-desbloquear-container");
+    if (contenedorBoton) {
+      contenedorBoton.remove();
+    }
+
+    // 6. Recalcular el porcentaje global de la colección
+    actualizarPorcentajeDesbloqueado();
+
+    // 7. Limpieza de clases una vez que termine la animación css (0.6 segundos)
+    setTimeout(() => {
+      tarjeta.classList.remove("animacion-destello");
+    }, 600);
+  }
+}
+
+function actualizarPorcentajeDesbloqueado() {
+  const totalCromos = cromosMundial.length;
+  const totalDesbloqueados = cromosDesbloqueados.length;
+  
+  // Cálculo matemático del porcentaje con protección de división por cero
+  const porcentaje = totalCromos > 0 ? Math.round((totalDesbloqueados / totalCromos) * 100) : 0;
+  
+  // Actualizar el nodo HTML que ya existía en tu maquetación
+  const nodoPorcentaje = document.getElementById("porcentajeDesbloqueado");
+  if (nodoPorcentaje) {
+    nodoPorcentaje.textContent = `${porcentaje}%`;
+  }
+}
 // ==============================================================
 // FLUJO CONTROLADO POR DOMContentLoaded. Modificación solicitada
 // ==============================================================
