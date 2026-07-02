@@ -303,7 +303,7 @@ function calcularTotalGoles() {
   let acumuladorGoles = 0;
 
   cromosMundial.forEach((jugador) => {
-    accumuladorGoles += jugador.estadisticas.goles;
+    acumuladorGoles += jugador.estadisticas.goles;
   });
 
   const contenedorGoles = document.getElementById("totalGoles");
