@@ -79,6 +79,22 @@ function renderizarAlbum(arregloAFiltrar = cromosMundial) {
 //   )
 // );
 
+// cromosMundial.push(
+//   crearJugador(
+//     1,
+//     "Jugador Demo",
+//     "Ecuador",
+//     "Delantero",
+//     "../imagenes/cromos/E1 William Pacho.jpg",
+//     "../Grupo_C/img/Maruecos.webp",
+//     "#F4C804",
+//     20,
+//     50,
+//     true,
+//     "Jugador de prueba"
+//   )
+// );
+
 cromosMundial.push(
   crearJugador(
     1,
@@ -176,7 +192,28 @@ cromosMundial.push(
 );
 
 
-renderizarAlbum();
+// ============================================================
+// FONDOS DINÁMICOS — CARLOS LÓPEZ 
+// feature/interfaz-fondos-dinamicos
+// ============================================================
+
+function aplicarFondosDinamicos() {
+  // 1. Capturamos todas las tarjetas que se encuentran actualmente en el HTML
+  const tarjetas = document.querySelectorAll(".card-cromo");
+
+  tarjetas.forEach((tarjeta) => {
+    // 2. Obtenemos el ID de la tarjeta desde el atributo 'data-id'
+    const jugadorId = parseInt(tarjeta.getAttribute("data-id"));
+
+    // 3. Buscamos al objeto jugador correspondiente en nuestro arreglo global
+    const jugador = cromosMundial.find((j) => j.id === jugadorId);
+
+    // 4. Si el jugador existe y tiene un color definido, aplicamos el estilo inline de forma segura
+    if (jugador && jugador.colorFondoHex) {
+      tarjeta.style.backgroundColor = jugador.colorFondoHex;
+    }
+  });
+}
 
 // ==========================
 // FILTROS — José López
@@ -214,8 +251,18 @@ function filtrarYMostrar() {
   renderizarAlbum(jugadoresFiltrados);
 }
 
-document.getElementById("buscarJugador").addEventListener("input", filtrarYMostrar);
-document.getElementById("filtroPais").addEventListener("change", filtrarYMostrar);
+// ==============================================================
+// FLUJO CONTROLADO POR DOMContentLoaded. Modificación solicitada
+// ==============================================================
 
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Primer renderizado del álbum y activación de fondos dinámicos iniciales
+  renderizarAlbum();
 
-poblarSelectorPaises();
+  // 2. Carga segura del selector de países
+  poblarSelectorPaises();
+
+  // 3. Escuchadores de eventos reactivos para los filtros de búsqueda
+  document.getElementById("buscarJugador").addEventListener("input", filtrarYMostrar);
+  document.getElementById("filtroPais").addEventListener("change", filtrarYMostrar);
+});
