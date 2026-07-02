@@ -240,7 +240,7 @@ function renderizarAlbum(arregloAFiltrar = cromosMundial) {
     // Generamos el botón de desbloqueo solo si sigue bloqueado
     const botonHTML = !estaDesbloqueado 
       ? `<div class="btn-desbloquear-container">
-           <button class="btn-desbloquear" onclick="desbloquearCromoPorId(${jugador.id})">Desbloquear Cromo</button>
+           <button class="btn-desbloquear" onclick="desbloquearCromoPorId(${jugador.id})">Desbloquear Cromo con Reto</button>
          </div>`
       : "";
 
@@ -331,7 +331,7 @@ function calcularTotalGoles() {
 }
 
 // ============================================================
-// SISTEMA DE RECOMPENSAS Y ESTADÍSTICAS — CARLOS LÓPEZ
+// SISTEMA DE RECOMPENSAS Y ESTADÍSTICAS — ALAN CHANATASIG
 // feature/sistema-recompensas-animaciones (COMMIT 3)
 // ============================================================
 

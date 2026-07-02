@@ -221,19 +221,23 @@ body{
 }
 
 /* ============================================================
-   SECCIÓN MODIFICADA POR CARLOS LÓPEZ
+   SECCIÓN MODIFICADA POR ALAN CHANATASIG
    feature/sistema-recompensas-animaciones (COMMIT 1)
 ============================================================ */
 
 /* Estado Bloqueado: Oculta la información y aplica desenfoque/escala de grises */
-.card-cromo.bloqueado .foto-jugador {
-    filter: grayscale(100%) brightness(30%);
+.card-cromo.bloqueado {
+    filter: grayscale(100%) blur(2px);
     transition: filter 0.5s ease;
+}
+
+.card-cromo.bloqueado .foto-jugador {
+    background: transparent;
 }
 
 .card-cromo.bloqueado .contenido-cromo p,
 .card-cromo.bloqueado .contenido-cromo .bandera {
-    visibility: hidden; /* Oculta datos sin romper el layout */
+    opacity: 0.4;
 }
 
 /* Contenedor del botón de desbloqueo dentro de la tarjeta */
