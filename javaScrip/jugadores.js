@@ -98,22 +98,6 @@ cromosMundial.push(
 cromosMundial.push(
   crearJugador(
     2,
-    "Orbelín Pineda",
-    "México",
-    "Mediocampista",
-    "../imagenes/cromos/PINEDA-Orbelin.png",
-    "../Grupo_A/img/banderaMexico.png",
-    "#00A859",
-    17,
-    0,
-    true,
-    "AEK Atenas"
-  )
-);
-
-cromosMundial.push(
-  crearJugador(
-    3,
     "Ronwen Williams",
     "Sudáfrica",
     "Portero",
@@ -129,23 +113,7 @@ cromosMundial.push(
 
 cromosMundial.push(
   crearJugador(
-    4,
-    "Lyle Foster",
-    "Sudáfrica",
-    "Delantero",
-    "../imagenes/cromos/Lyle FOSTER.png",
-    "../Grupo_A/img/banderaSudafrica.png",
-    "#007847",
-    9,
-    0,
-    false,
-    "Burnley FC"
-  )
-);
-
-cromosMundial.push(
-  crearJugador(
-    5,
+    3,
     "Son Heung-min",
     "Corea del Sur",
     "Delantero",
@@ -161,7 +129,7 @@ cromosMundial.push(
 
 cromosMundial.push(
   crearJugador(
-    6,
+    4,
     "Patrik Schick",
     "República Checa",
     "Delantero",
@@ -177,7 +145,7 @@ cromosMundial.push(
 
 cromosMundial.push(
   crearJugador(
-    7,
+    5,
     "Jonathan David",
     "Canadá",
     "Delantero",
@@ -193,7 +161,7 @@ cromosMundial.push(
 
 cromosMundial.push(
   crearJugador(
-    8,
+    6,
     "Johan Manzambi",
     "Suiza",
     "Defensa",
@@ -207,69 +175,6 @@ cromosMundial.push(
   )
 );
 
-cromosMundial.push(
-  crearJugador(
-    9,
-    "Rubén Vargas",
-    "Suiza",
-    "Extremo",
-    "../imagenes/cromos/VARGAS-Ruben.png",
-    "../Grupo_B/img/suiza.png",
-    "#FF0000",
-    17,
-    2,
-    true,
-    "FC Augsburg"
-  )
-);
-
-cromosMundial.push(
-  crearJugador(
-    10,
-    "Ermin Mahmic",
-    "Bosnia",
-    "Defensa",
-    "../imagenes/cromos/MAHMIC-Ermin.png",
-    "../Grupo_B/img/bosnia.png",
-    "#0052B4",
-    26,
-    2,
-    false,
-    "Jugador defensivo"
-  )
-);
-
-cromosMundial.push(
-  crearJugador(
-    11,
-    "Jovo Lukic",
-    "Bosnia",
-    "Delantero",
-    "../imagenes/cromos/LUKIC-Jovo.png",
-    "../Grupo_B/img/bosnia.png",
-    "#0052B4",
-    25,
-    1,
-    false,
-    "FK Borac"
-  )
-);
-
-cromosMundial.push(
-  crearJugador(
-    12,
-    "Assim Madibo",
-    "Qatar",
-    "Mediocampista",
-    "../imagenes/cromos/ASSIM-MADIBO.png",
-    "../Grupo_B/img/catar.png",
-    "#8A1538",
-    23,
-    1,
-    false,
-    "Selección de Qatar"
-  )
-);
 
 renderizarAlbum();
 
